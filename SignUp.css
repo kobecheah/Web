@@ -83,12 +83,18 @@
 }
 
 @media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 607px;
+  }
+
   .u-section-1 .u-image-1 {
-    margin-top: 14px;
+    margin-top: 52px;
   }
 
   .u-section-1 .u-form-1 {
-    margin-top: 47px;
+    height: 459px;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-right: initial;
     margin-left: initial;
   }
