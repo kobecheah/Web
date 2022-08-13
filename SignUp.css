@@ -1,5 +1,5 @@
 .u-section-1 .u-sheet-1 {
-  min-height: 791px;
+  min-height: 566px;
 }
 
 .u-section-1 .u-image-1 {
@@ -17,6 +17,10 @@
   font-size: 0.75rem;
 }
 
+.u-section-1 .u-input-1 {
+  font-size: 0.75rem;
+}
+
 .u-section-1 .u-form-group-2 {
   margin-bottom: 0;
   margin-top: 30px;
@@ -26,23 +30,41 @@
   font-size: 0.75rem;
 }
 
+.u-section-1 .u-input-2 {
+  font-size: 0.75rem;
+}
+
 .u-section-1 .u-label-3 {
+  font-size: 0.75rem;
+}
+
+.u-section-1 .u-input-3 {
   font-size: 0.75rem;
 }
 
 .u-section-1 .u-form-group-4 {
   margin-left: 0;
+  margin-right: undefined;
 }
 
 .u-section-1 .u-label-4 {
   font-size: 0.75rem;
 }
 
+.u-section-1 .u-input-4 {
+  font-size: 0.75rem;
+}
+
 .u-section-1 .u-form-group-5 {
   margin-left: 0;
+  margin-right: undefined;
 }
 
 .u-section-1 .u-label-5 {
+  font-size: 0.75rem;
+}
+
+.u-section-1 .u-input-5 {
   font-size: 0.75rem;
 }
 
@@ -55,13 +77,11 @@
   font-size: 0.75rem;
 }
 
-.u-section-1 .u-btn-2 {
-  border-style: none;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: -67px auto 60px 489px;
-  padding: 13px 30px 14px 29px;
+.u-section-1 .u-btn-1 {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding: 10px 0;
 }
 
 @media (max-width: 1199px) {
@@ -76,9 +96,8 @@
     margin-left: 169px;
   }
 
-  .u-section-1 .u-btn-2 {
-    margin-top: -65px;
-    margin-left: 389px;
+  .u-section-1 .u-btn-1 {
+    width: 61%;
   }
 }
 
@@ -87,11 +106,6 @@
     margin-right: 91px;
     margin-left: 59px;
   }
-
-  .u-section-1 .u-btn-2 {
-    margin-top: -69px;
-    margin-left: 279px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -99,25 +113,46 @@
     margin-right: 0;
     margin-left: 0;
   }
-
-  .u-section-1 .u-btn-2 {
-    margin-left: auto;
-  }
 }
 
 @media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 541px;
+  }
+
   .u-section-1 .u-image-1 {
-    margin-top: 52px;
+    margin-top: 10px;
   }
 
   .u-section-1 .u-form-1 {
-    height: 459px;
-    margin-top: 0;
+    height: 386px;
+    margin-top: 21px;
+    margin-bottom: 10px;
     margin-right: initial;
     margin-left: initial;
   }
 
-  .u-section-1 .u-btn-2 {
-    margin-top: -63px;
+  .u-section-1 .u-label-1 {
+    font-size: 0.625rem;
+  }
+
+  .u-section-1 .u-label-2 {
+    font-size: 0.625rem;
+  }
+
+  .u-section-1 .u-label-3 {
+    font-size: 0.625rem;
+  }
+
+  .u-section-1 .u-label-4 {
+    font-size: 0.625rem;
+  }
+
+  .u-section-1 .u-label-5 {
+    font-size: 0.625rem;
+  }
+
+  .u-section-1 .u-label-6 {
+    font-size: 0.625rem;
   }
 }

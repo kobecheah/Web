@@ -20,7 +20,7 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <img class="u-image u-image-default u-image-1" src="images/e861365f9eb6b420f45b6defdb6dfba2a2c2e893c0cd456bc0082c94bffd607b15e9aff2df54abb7dddca9f7d2fe4ec2d7990d4941e2a3e2d47c05_1280.jpg" alt="" data-image-width="1280" data-image-height="855">
         <div class="u-expanded-width-xs u-form u-form-1">
-          <form action="#"  onsubmit="Submit()" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-12 u-form-vertical u-inner-form" style="padding: 0px;" source="custom" name="form" redirect="true">
+          <form onsubmit="return myFunction()" class="u-clearfix u-form-custom-backend u-form-spacing-12 u-form-vertical u-inner-form" style="padding: 0px;" source="custom" name="form" redirect="true">
             <div class="u-form-group u-form-name u-label-none">
               <label for="name-6797" class="u-label u-label-1">Name</label>
               <input type="text" placeholder="FULL NAME" id="name-6797" name="name" class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-input-1" required="required">
@@ -47,50 +47,56 @@
             </div>
             <div class="u-form-group u-label-none u-form-group-5">
               <label for="text-432f" class="u-label u-label-5">Input</label>
-              <input type="text" placeholder="CONFRIM PASSWORD" id="text-432f" name="password-1" class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-input-5" required="required">
+              <input type="password" placeholder="CONFRIM PASSWORD" id="text-432f" name="password-1" class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-input-5" required="required">
             </div>
             <div class="u-form-checkbox u-form-group u-form-group-6">
               <input type="checkbox" id="checkbox-faa0" name="checkbox" value="On" required="required">
               <label for="checkbox-faa0" class="u-label u-label-6">T&amp;C/Privacy Policy</label>
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <a href="#" onclick="Submit()" class="u-btn u-btn-submit u-button-style u-btn-1">Sign up</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <a href="#"  class="u-btn u-btn-submit u-button-style u-btn-1">Sign up</a>
+              <input type="submit" value="submit" class="u-form-control-hidden"> 
             </div>
+            <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
+            <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
+            <input type="hidden" value="" name="recaptchaResponse">
           </form>
         </div>
       </div>
     </section>
-  <!-- <section class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-dialog-section-4" id="sec-b5d3" data-dialog-show-on="page_exit" data-dialog-show-interval="3000" data-dialog-show-on-list="161976806">
-      <div class="u-container-style u-dialog u-shape-rectangle u-white u-dialog-1">
-        <div class="u-container-layout u-container-layout-1">
+  <section class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-dialog-section-4" id="sec-b5d3" >
+      <div  class="u-align-left u-container-style u-dialog u-shape-rectangle u-white u-dialog-1">
+        <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">
           <div class="u-form u-form-1">
-            <form action="//publish.nicepage.com/Form/Process" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;">
-              <div class="u-form-group u-form-select u-form-group-1">
-                <label for="select-8ec5" class="u-label">List</label>
-                <div class="u-form-select-wrapper">
-                  <select id="select-8ec5" name="select" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" size="5">
-                    <option value="Item 1">Item 1</option>
-                    <option value="Item 2">Item 2</option>
-                    <option value="Item 3">Item 3</option>
-                  </select>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+            <form id="myDIV" onsubmit="SubmitSurvey()"  method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;">
+              <div class="u-form-group u-form-radiobutton u-form-group-1">
+                <div class="u-form-radio-button-wrapper">
+                  <input type="radio" name="radiobutton" value="Debit Card">
+                  <label class="u-label" for="radiobutton">Debit Card</label>
+                  <br>
+                  <input type="radio" name="radiobutton" value="Credit Card">
+                  <label class="u-label" for="radiobutton">Credit Card</label>
+                  <br>
+                  <input type="radio" name="radiobutton" value="eWallet">
+                  <label class="u-label" for="radiobutton">eWallet</label>
+                  <br>
+                  <input type="radio" name="radiobutton" value="Bank QR">
+                  <label class="u-label" for="radiobutton">Bank QR</label>
+                  <br>
                 </div>
               </div>
               <div class="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-form-group u-form-submit">
                 <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
                 <input type="submit" value="submit" class="u-form-control-hidden">
               </div>
-              <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-              <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-              <input type="hidden" value="" name="recaptchaResponse">
             </form>
           </div>
-        </div><button class="u-dialog-close-button u-icon u-text-grey-40 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-efe9"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-efe9"><rect x="7" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="2" height="16"></rect><rect x="0" y="7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="16" height="2"></rect></svg></button>
+          <h3 class="u-text u-text-default-xs u-text-1">Quick Survey</h3>
+          <h6 class="u-align-left-xs u-text u-text-2">Which of the following cashless payments do you use frequently?</h6>
+        </div><button class="u-dialog-close-button u-icon u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" ><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-efe9"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-efe9"><rect x="7" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="2" height="16"></rect><rect x="0" y="7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="16" height="2"></rect></svg></button>
       </div>
-    </section><style> 
-    
-    .u-dialog-section-4 {
+    </section>
+    <style> .u-dialog-section-4 {
   min-height: 500px;
 }
 
@@ -104,14 +110,24 @@
 }
 
 .u-dialog-section-4 .u-form-1 {
-  width: 570px;
-  margin-bottom: 0;
-  margin-top: 0;
+  height: 187px;
+  margin: 0 170px 0 0;
 }
 
 .u-dialog-section-4 .u-form-group-1 {
   margin-bottom: 0;
   margin-top: 30px;
+}
+
+.u-dialog-section-4 .u-text-1 {
+  width: auto;
+  margin: -262px auto 0;
+}
+
+.u-dialog-section-4 .u-text-2 {
+  width: auto;
+  font-size: 1.125rem;
+  margin: 20px 1px 0 20px;
 }
 
 .u-dialog-section-4 .u-icon-1 {
@@ -122,6 +138,10 @@
 @media (max-width: 991px) {
   .u-dialog-section-4 .u-dialog-1 {
     width: 720px;
+  }
+
+  .u-dialog-section-4 .u-form-1 {
+    margin-right: 90px;
   }
 }
 
@@ -136,43 +156,50 @@
   }
 
   .u-dialog-section-4 .u-form-1 {
-    width: 520px;
+    margin-right: 0;
   }
 }
 
 @media (max-width: 575px) {
   .u-dialog-section-4 .u-dialog-1 {
     width: 357px;
-    min-height: 383px;
     height: auto;
-    margin-top: 41px;
+    min-height: 346px;
+    margin-top: 121px;
     margin-left: calc(((100% - 340px) / 2) + -17px);
   }
 
   .u-dialog-section-4 .u-container-layout-1 {
-    padding-top: 23px;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .u-dialog-section-4 .u-form-1 {
-    height: 403px;
-    width: 320px;
-    margin-top: 13px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 217px;
+    margin-top: 91px;
+    margin-left: 20px;
   }
-}</style> -->
-</body>
-</html>
+
+  .u-dialog-section-4 .u-text-1 {
+    margin-top: -288px;
+  }
+
+  .u-dialog-section-4 .u-text-2 {
+    font-size: 1rem;
+    margin-top: 14px;
+    margin-right: 0;
+    margin-left: 21px;
+  }
+}</style>
+</body></html>
+
 <script>
-  function Submit() {
-    window.location.replace("https://kobecheah.github.io/web/Login.html");
-  //     if (document.myForm.myText.value == '')
-  //         return false;
-  //         // When it returns false - your form will not submit and will not redirect too
-  //     else
-  //         return true;
-  //      // When it returns true - your form will submit and will redirect
-  // // (actually it's a part of submit) id you have mentioned in action
+  function myFunction() {
+    var x = document.getElementById("sec-b5d3");
+      x.style.display = "block";
+      return false;
   }
-  </script>
+  function SubmitSurvey() {
+    window.location.replace("https://kobecheah.github.io/web/Login.html");
+  }
+</script>
+  
