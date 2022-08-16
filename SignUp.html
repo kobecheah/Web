@@ -43,11 +43,11 @@
             </div>
             <div class="u-form-group u-label-none u-form-group-4">
               <label for="text-a646" class="u-label u-label-4">password</label>
-              <input type="password" placeholder="PASSWORD" id="text-a646" name="password" class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-input-4" required="required">
+              <input type="password" placeholder="PASSWORD" id="text-a646"  name="password" onChange="onChange()" class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-input-4" required="required">
             </div>
             <div class="u-form-group u-label-none u-form-group-5">
               <label for="text-432f" class="u-label u-label-5">Input</label>
-              <input type="password" placeholder="CONFRIM PASSWORD" id="text-432f" name="confirmPass" class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-input-5" required="required">
+              <input type="password" placeholder="CONFRIM PASSWORD" id="text-432f" name="confirmPass" onChange="onChange()" class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-input-5" required="required">
             </div>
             <div class="u-form-checkbox u-form-group u-form-group-6">
               <input type="checkbox" id="checkbox-faa0" name="checkbox" value="On" required="required">
@@ -191,23 +191,21 @@
 
 <script>
   function myFunction() {
-  const password = document.querySelector('input[name=password]');
-  const confirm = document.querySelector('input[name=confirmPass]');
-  if (confirm.value === password.value) 
-  {
       var x = document.getElementById("sec-b5d3");
       x.style.display = "block";
-      return false;
-  } 
-  else {
-    confirm.setCustomValidity('Passwords do not match');
-       return false;
-  }
-        
+      return false;    
   }
   function SubmitSurvey() {
     window.location.replace("https://kobecheah.github.io/web/Login.html");
   }
-
+function onChange() {
+  const password = document.querySelector('input[name=password]');
+  const confirm = document.querySelector('input[name=confirmPass]');
+  if (confirm.value === password.value) {
+    confirm.setCustomValidity('');
+  } else {
+    confirm.setCustomValidity('Passwords do not match');
+  }
+}
 </script>
   
