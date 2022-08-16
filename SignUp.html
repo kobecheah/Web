@@ -194,12 +194,23 @@
 
 <script>
   function myFunction() {
-    var x = document.getElementById("sec-b5d3");
+  const password = document.querySelector('input[name=password]');
+  const confirm = document.querySelector('input[name=password-1]');
+  if (confirm.value === password.value) 
+  {
+    confirm.setCustomValidity('');
+     var x = document.getElementById("sec-b5d3");
       x.style.display = "block";
       return false;
+  } 
+  else {
+    confirm.setCustomValidity('Passwords do not match');
+  }
+        
   }
   function SubmitSurvey() {
     window.location.replace("https://kobecheah.github.io/web/Login.html");
   }
+
 </script>
   
