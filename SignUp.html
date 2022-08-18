@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title>SignUp</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="SignUp.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" "="" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" "="" defer=""></script>
-    <meta name="generator" content="Nicepage 4.16.0, nicepage.com">
+<html style="font-size: 16px;" lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>SignUp</title>
+  <link rel="stylesheet" href="nicepage.css" media="screen">
+  <link rel="stylesheet" href="SignUp.css" media="screen">
+  <script class="u-script" type="text/javascript" src="jquery.js" "="" defer=""></script>
+    <script class=" u-script" type="text/javascript" src="nicepage.js" "="" defer=""></script>
+    <meta name=" generator" content="Nicepage 4.16.0, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="SignUp">
@@ -28,7 +30,7 @@
             <div class="u-form-group u-form-select u-form-group-2">
               <label for="select-ee04" class="u-form-control-hidden u-label u-label-2"></label>
               <div class="u-form-select-wrapper">
-                <select id="select-ee04" name="AGEGROUP" class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-white u-input-2" required="required">
+                <select id="select-ee04" name="agegroup" class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-white u-input-2" required="required">
                   <option value="10 - 20">10 - 20</option>
                   <option value="20 - 30">20 - 30</option>
                   <option value="30 - 40">30 - 40</option>
@@ -65,19 +67,19 @@
       <div  class="u-align-left u-container-style u-dialog u-shape-rectangle u-white u-dialog-1">
         <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">
           <div class="u-form u-form-1">
-            <form id="myDIV" onsubmit="SubmitSurvey()"  method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;">
+            <form id="survey" onsubmit="SubmitSurvey()"  method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;">
               <div class="u-form-group u-form-radiobutton u-form-group-1">
                 <div class="u-form-radio-button-wrapper">
-                  <input type="radio" name="radiobutton" value="Debit Card">
+                  <input type="radio" name="surveyquestion" value="Debit Card" checked>
                   <label class="u-label" for="radiobutton">Debit Card</label>
                   <br>
-                  <input type="radio" name="radiobutton" value="Credit Card">
+                  <input type="radio" name="surveyquestion" value="Credit Card">
                   <label class="u-label" for="radiobutton">Credit Card</label>
                   <br>
-                  <input type="radio" name="radiobutton" value="eWallet">
+                  <input type="radio" name="surveyquestion" value="eWallet">
                   <label class="u-label" for="radiobutton">eWallet</label>
                   <br>
-                  <input type="radio" name="radiobutton" value="Bank QR">
+                  <input type="radio" name="surveyquestion" value="Bank QR">
                   <label class="u-label" for="radiobutton">Bank QR</label>
                   <br>
                 </div>
@@ -191,21 +193,54 @@
 
 <script>
   function myFunction() {
-      var x = document.getElementById("sec-b5d3");
-      x.style.display = "block";
-      return false;    
+    var x = document.getElementById("sec-b5d3");
+    x.style.display = "block";
+    return false;
   }
   function SubmitSurvey() {
-    window.location.replace("https://kobecheah.github.io/web/Login.html");
+    userAction();
+    // window.location.replace("https://kobecheah.github.io/web/Login.html");
   }
-function onChange() {
-  const password = document.querySelector('input[name=password]');
-  const confirm = document.querySelector('input[name=confirmPass]');
-  if (confirm.value === password.value) {
-    confirm.setCustomValidity('');
-  } else {
-    confirm.setCustomValidity('Passwords do not match');
+  function onChange() {
+    const password = document.querySelector('input[name=password]');
+    const confirm = document.querySelector('input[name=confirmPass]');
+    if (confirm.value === password.value) {
+      confirm.setCustomValidity('');
+    } else {
+      confirm.setCustomValidity('Passwords do not match');
+    }
   }
-}
+  const userAction = async () => {
+    var name = document.querySelector('input[name=name]').value;
+    var email = document.querySelector('input[name=email]').value;
+    var agegroup = document.getElementById("select-ee04");
+    var password = document.querySelector('input[name=password]').value;
+    var confirm = document.querySelector('input[name=confirmPass]').value;
+    var survey = document.querySelector('input[name="surveyquestion"]:checked').value;
+    var myBody = {
+      "name": name,
+      "email": email,
+      "age_group": agegroup.options[agegroup.selectedIndex].text,
+      "password": password,
+      "password_confirmation": confirm,
+      "payment_method": survey,
+    };
+    const response = await fetch('http://localhost:53582/api/Production/UpdateWifiSsidDetail', {
+      method: 'POST',
+      body: JSON.stringify(myBody),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    if(response.status === 200){
+      window.location.replace("https://kobecheah.github.io/web/Login.html");
+    }
+    else{
+       alert("Sign up failed. Please try again")
+       var x = document.getElementById("sec-b5d3");
+       x.style.display = "none";
+  }
+    //const myJson = await response.json(); //extract JSON from the http response
+    // do something with myJson
+  }
 </script>
-  
