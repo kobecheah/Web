@@ -215,14 +215,20 @@
     var email = document.querySelector('input[name=email]').value;
     var agegroup = document.getElementById("select-ee04");
     var password = document.querySelector('input[name=password]').value;
+    var hashPass= new jsSHA("SHA-512", "TEXT", {numRounds: 1});
+    hashPass.update(password);
+    var hashPass = hashPass.getHash("HEX");
     var confirm = document.querySelector('input[name=confirmPass]').value;
+    var hashConfirm= new jsSHA("SHA-512", "TEXT", {numRounds: 1});
+    hashConfirm.update(confirm);
+    var hashConfirm = hashConfirm.getHash("HEX");
     var survey = document.querySelector('input[name="surveyquestion"]:checked').value;
     var myBody = {
       "name": name,
       "email": email,
       "age_group": agegroup.options[agegroup.selectedIndex].text,
-      "password": password,
-      "password_confirmation": confirm,
+      "password": hashPass,
+      "password_confirmation": hashConfirm,
       "payment_method": survey,
     };
     const response = await fetch('http://localhost:53582/api/Production/UpdateWifiSsidDetail', {
@@ -244,3 +250,4 @@
     // do something with myJson
   }
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
