@@ -215,39 +215,41 @@
     var email = document.querySelector('input[name=email]').value;
     var agegroup = document.getElementById("select-ee04");
     var password = document.querySelector('input[name=password]').value;
-    var hashPass= new jsSHA("SHA-512", "TEXT", {numRounds: 1});
-    hashPass.update(password);
-    var hashPass = hashPass.getHash("HEX");
     var confirm = document.querySelector('input[name=confirmPass]').value;
-    var hashConfirm= new jsSHA("SHA-512", "TEXT", {numRounds: 1});
-    hashConfirm.update(confirm);
-    var hashConfirm = hashConfirm.getHash("HEX");
     var survey = document.querySelector('input[name="surveyquestion"]:checked').value;
     var myBody = {
       "name": name,
       "email": email,
       "age_group": agegroup.options[agegroup.selectedIndex].text,
-      "password": hashPass,
-      "password_confirmation": hashConfirm,
+      "password": password,
+      "password_confirmation": confirm,
       "payment_method": survey,
     };
-    const response = await fetch('http://localhost:53582/api/Production/UpdateWifiSsidDetail', {
-      method: 'POST',
-      body: JSON.stringify(myBody),
-      headers: {
-        'Content-Type': 'application/json'
+    try {
+      const response = await fetch('http://localhost:53582/api/Production/UpdateWifiSsidDetail', {
+        method: 'POST',
+        body: JSON.stringify(myBody),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      if (response.status === 200) {
+        window.location.replace("https://kobecheah.github.io/web/Login.html");
       }
-    });
-    if(response.status === 200){
-      window.location.replace("https://kobecheah.github.io/web/Login.html");
+      else {
+        alert("Sign up failed. Please try again")
+        var x = document.getElementById("sec-b5d3");
+        x.style.display = "none";
+      }
+
     }
-    else{
-       alert("Sign up failed. Please try again")
-       var x = document.getElementById("sec-b5d3");
-       x.style.display = "none";
-  }
+    catch (ex) {
+      alert(ex.message)
+      var x = document.getElementById("sec-b5d3");
+      x.style.display = "none";
+    }
     //const myJson = await response.json(); //extract JSON from the http response
     // do something with myJson
   }
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
