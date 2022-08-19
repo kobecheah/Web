@@ -222,7 +222,7 @@
       "password_confirmation": confirm,
       "payment_method": survey,
     };
-    const response = await fetch('https://api-sekingo-stage.thebluelobby.com//api/register',
+    fetch('https://api-sekingo-stage.thebluelobby.com//api/register',
       {
         method: 'POST',
         body: JSON.stringify(myBody),
