@@ -49,7 +49,7 @@
 
 <script>
   form.addEventListener("submit", Submit);
-   async function  Submit() {
+  async function Submit() {
     var email = document.querySelector('input[name=email]').value;
     var password = document.querySelector('input[name=password]').value;
 
@@ -57,27 +57,34 @@
       "email": email,
       "password": password,
     };
-    fetch('https://api-sekingo-stage.thebluelobby.com//api/login', 
-    {
-      method: 'POST',
-      body:JSON.stringify(myBody),
-      redirect: 'follow',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(response => response.json()) 
-    .then(jsondata =>{ 
-     var status = jsondata.status;
-      if(status===false){
-        alert(JSON.stringify(jsondata.errors.error));
-      }
-      else{
-        window.location.replace("https://kobecheah.github.io/TreasureHunt/");
-      }  
-    })
+    fetch('https://api-sekingo-stage.thebluelobby.com//api/login',
+      {
+        method: 'POST',
+        body: JSON.stringify(myBody),
+        redirect: 'follow',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(response => response.json())
+      .then(jsondata => {
+        var status = jsondata.status;
+        if (status === false) {
+          alert(JSON.stringify(jsondata.errors.error));
+        }
+        else {
+          var rmbMe = document.getElementById("checkbox-f682").checked;
+          if (rmbMe === true) {
+            document.cookie = "token=" + jsondata.token;
+          }
 
-    
-   
+          window.location.replace("https://kobecheah.github.io/TreasureHunt/");
+        }
+      })
+
+
+
   }
-
+  function setCookie(tokenValue) {
+ 
+  }
 </script>
