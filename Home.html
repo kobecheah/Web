@@ -19,31 +19,11 @@
     <section class="u-clearfix u-section-1" id="sec-5533">
       <div class="u-clearfix u-sheet u-sheet-1">
         <img class="u-image u-image-default u-image-1" src="images/logo.png" alt="" data-image-width="359" data-image-height="349">
-        <a  href="https://kobecheah.github.io/web/SignUp.html" class="u-border-none u-btn u-button-style u-none u-btn-1"><span class="u-file-icon u-icon u-icon-1"><img src="images/Registernowbutton.png" alt=""></span>&nbsp; 
-        </a><a href="https://kobecheah.github.io/web/Login.html" class="u-file-icon u-icon u-icon-2"><img src="images/login_playnowbutton.png" alt=""></a>
+        <a  href="./SignUp.html" class="u-border-none u-btn u-button-style u-none u-btn-1"><span class="u-file-icon u-icon u-icon-1"><img src="images/Registernowbutton.png" alt=""></span>&nbsp; 
+        </a><a href="./Login.html" class="u-file-icon u-icon u-icon-2"><img src="images/login_playnowbutton.png" alt=""></a>
         <img class="u-image u-image-default u-preserve-proportions u-image-2" src="images/BotoomText.png" alt="" data-image-width="170" data-image-height="36">
         <img class="u-image u-image-default u-preserve-proportions u-image-3" src="images/BotoomText.png" alt="" data-image-width="170" data-image-height="36">
         <img class="u-image u-image-default u-image-4" src="images/HLBlogo.png" alt="" data-image-width="433" data-image-height="73">
       </div>
     </section>
 </body></html>
-
-<script>
-  window.onload = function CheckCookies() {
-
-  let name = "rmbtoken=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      window.location.replace("https://yk-chong.github.io/treasurehunt/");
-    }
-  }
-  return "";
-
-}
-</script>

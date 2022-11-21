@@ -14,6 +14,7 @@
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Login">
     <meta property="og:type" content="website">
+    <script src="./script.js"></script>
   </head>
   <body class="u-body u-xl-mode" data-lang="en" >
     <section class="u-clearfix u-section-1" id="sec-bda4">
@@ -46,7 +47,7 @@
       <h5 class="u-text u-text-custom-color-4 u-text-default-xs u-text-2">Email</h5>
       <a  style="top: 8px;"onclick="Submit()" type="submit" value="submit" name="submit" class="u-align-center-xs u-border-none u-btn u-button-style u-none u-btn-1"><span class="u-file-icon u-icon u-icon-1"><img src="images/loginnowbutton.png"></span></a>
       <img onclick="ShowPass();" class="u-image u-image-contain u-image-default u-image-3" src="images/Element1.png" style="top:-3px;" alt="" data-image-width="71" data-image-height="41">
-      <a style="top: -68px;" href="https://kobecheah.github.io/web/ForgotPassword.html" class="u-text u-text-custom-color-4 u-text-1">Forgot Password</a>
+      <a style="top: -68px;" href="./ForgotPassword.html" class="u-text u-text-custom-color-4 u-text-1">Forgot Password</a>
     </section>
 
     <section class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-xl u-dialog-section-4" id="sec-b5d3" data-dialog-show-on="page_exit" data-dialog-show-interval="3000" data-dialog-show-on-list="161976806">
@@ -271,15 +272,15 @@
           return false; 
   }
   var jsondatas;
-  function OpenApp(jsondata) 
-  {
-          var rmbMe = document.getElementById("checkbox-ad46").checked;
-          if (rmbMe === true) {
-            document.cookie = "rmbtoken=" + jsondatas.token +  ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/";     
-          }
-          document.cookie = "token=" + jsondatas.token +  ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/";
-          window.location.replace("https://kobecheah.github.io/TreasureHunt/");
-       
+  function OpenApp(jsondata) {
+    var rmbMe = document.getElementById("checkbox-ad46").checked;
+    const token = jsondatas.token;
+    if (rmbMe === true) {
+      document.cookie = "rmbtoken=" + token + ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/";
+    }
+    document.cookie = "token=" + token + ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/";
+    sessionStorage.setItem("token", token);
+    window.location.replace(appUrl);
   }
 
 
@@ -291,7 +292,7 @@
       "email": email,
       "password": password,
     };
-    fetch('https://api-sekingo-stage.thebluelobby.com//api/login',
+    fetch(apiDomain + 'api/login',
       {
         method: 'POST',
         body: JSON.stringify(myBody),
