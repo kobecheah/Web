@@ -446,11 +446,11 @@ function ShowConfirmPass(){
  
 }
 function changeImage(id) {
-  var image = document.getElementById(id).src;
+  var image = document.getElementById(id).getAttribute("src");
     if (document.getElementById(id).getAttribute("src") === "images/AnswerColumn.png"){
-        document.getElementById(id).getAttribute("src") = "images/AnswerSelected.png";
+        document.getElementById(id).src = "images/AnswerSelected.png";
     } else {
-        document.getElementById(id).getAttribute("src") = "images/AnswerColumn.png";
+        document.getElementById(id).src = "images/AnswerColumn.png";
     }
 }
 </script>
