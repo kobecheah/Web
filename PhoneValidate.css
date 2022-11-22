@@ -1,0 +1,11 @@
+.u-section-1 .u-image-1 {
+  zoom: 150%;
+  min-height: 613px;
+  background-image: url("images/Desktopwillshow.png");
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-image-1 {
+    min-height: 500px;
+  }
+}
