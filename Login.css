@@ -130,6 +130,7 @@
   }
 
   .u-section-1 .u-text-1 {
+    top: -45px;
     font-size: 0.75rem;
     width: auto;
     margin: -19px calc(((100% - 720px) / 2) + 180px) 0 calc(((100% - 720px) / 2) + 430px);
@@ -231,6 +232,7 @@
   }
 
   .u-section-1 .u-text-1 {
+    top: -69px;
     margin-right: calc(((100% - 340px) / 2) + 23px);
     margin-left: calc(((100% - 340px) / 2) + 210px);
   }
