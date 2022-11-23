@@ -392,6 +392,7 @@ input[type=text]:focus {
     }
   }
   async function SubmitSurvey() {
+    const params = sessionStorage.getItem('params');
     var name = document.querySelector('input[name=name]').value;
     var email = document.querySelector('input[name=email]').value;
     var agegroup = document.getElementById("select-b3ac");
@@ -410,6 +411,8 @@ input[type=text]:focus {
     if(survey3Q!=""){ SurveyNew = SurveyNew + survey3Q}
     if(survey4Q!=""){ SurveyNew = SurveyNew + survey4Q}
     if(survey5Q!=""){ SurveyNew = SurveyNew + survey5Q}
+
+    
     var myBody = {
       "name": name,
       "email": email,
@@ -417,7 +420,7 @@ input[type=text]:focus {
       "password": password,
       "password_confirmation": confirm,
       "payment_method": SurveyNew,
-      "url" :"https://yk-chong.github.io/treasurehunt/",
+      "url" : appUrl + "Login.html" + (params == null ? "" : params),
     };
     fetch(apiDomain + 'api/register',
       {
