@@ -21,12 +21,12 @@
       <div class="u-clearfix u-sheet u-valign-top-lg u-valign-top-xl u-sheet-1">
         <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-contain u-image-default u-image-1" src="images/Registerpagebgframe.png" alt="" data-image-width="948" data-image-height="1348">
         <img class="u-expanded-width-xs u-image u-image-contain u-image-default u-image-2" src="images/MainLogo.png" alt="" data-image-width="733" data-image-height="388">
-        <h6 class="u-text u-text-custom-color-5 u-text-1">Full Name as per NRIC /Passport</h6>
+        <h6  class="u-text u-text-custom-color-5 u-text-1"> </h6> 
         <div class="u-form u-form-1">
           <form  class="u-clearfix u-form-spacing-0 u-form-vertical u-inner-form" source="email" name="form" style="padding: 0px;">
             <div class="u-form-group u-form-name u-label-none u-form-group-1">
               <label for="name-e9a0" class="u-label">Name</label>
-              <input type="text" id="name-e9a0" name="name" class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-white u-input-1" required="required">
+              <input type="text" id="name-e9a0" name="name" class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-white u-input-1 u-input-3" required="required" placeholder="Full Name as per NRIC /Passport">
             </div> 
           </form>
         </div>
@@ -35,7 +35,8 @@
             <div class="u-form-group u-form-select u-label-none u-form-group-2">
               <label for="select-b3ac" class="u-label">Dropdown</label>
               <div class="u-form-select-wrapper">
-                <select id="select-b3ac" name="ageGroup" class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-white u-input-2" required="required">
+                <select id="select-b3ac" name="ageGroup" class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-white u-input-2" required="required" placeholder="Age">
+                  <option value="" disabled selected hidden>Age</option>
                   <option value="7 - 12 years old">7 - 12 years old</option>
                   <option value="13 - 18 years old">13 - 18 years old</option>
                   <option value="19 - 25 years old">19 - 25 years old</option>
@@ -74,12 +75,12 @@
         <div class="u-form u-form-6">
           <form  class="u-clearfix u-form-spacing-0 u-form-vertical u-inner-form" source="email" name="form-2" style="padding: 0px;">
             <div class="u-form-checkbox u-form-group u-form-group-6">
-              <input type="checkbox" id="checkbox-fa2a" name="checkbox" value="On">
-              <label for="checkbox-fa2a" class="u-custom-font u-heading-font u-label u-label-6">I've read and agree to <a href="https://nicepage.com/website-templates"><span><u>Terms of Service and Privacy Policy</u> </span></a> </label>
+              <input style="height: 10px;" type="checkbox" id="checkbox-fa2a" name="checkbox" value="On">
+              <label for="checkbox-fa2a" class="u-custom-font u-heading-font u-label u-label-6"> I've read and agree to <a href="https://google.com"><span><u>Terms of Service and Privacy Policy</u> </span></a> </label>
             </div>
           </form>
         </div>
-        <a  class="u-border-none u-btn u-button-style u-none u-btn-1"><span class="u-file-icon u-icon u-icon-1"><img onclick="return OpenSurvey();" src="images/Playnowbutton.png" alt=""></span>&nbsp;
+        <a id ="playNow" class="u-border-none u-btn u-button-style u-none u-btn-1"><span class="u-file-icon u-icon u-icon-1"><img onclick="return OpenSurvey();" src="images/Playnowbutton.png" alt=""></span>&nbsp;
         </a>
         <img onclick="ShowPass();" class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3" src="images/Element1.png" alt="" data-image-width="71" data-image-height="41" >
         <img onclick="ShowConfirmPass();"  class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4" src="images/Element1.png" alt="" data-image-width="71" data-image-height="41">
@@ -106,7 +107,7 @@
           <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-6">Prefer Cash</h6>
         </div>
        </div>
-      <img class="u-image u-image-default u-image-8" src="images/Submitbutton.png"  onclick="SubmitSurvey()"  alt="" data-image-width="394" data-image-height="122">
+      <img id="Submitbutton" class="u-image u-image-default u-image-8" src="images/Submitbutton.png"  onclick="SubmitSurvey()"  alt="" data-image-width="394" data-image-height="122">
     </section>
 
 
@@ -358,6 +359,8 @@ input[type=text]:focus {
   input[type=password]:focus {
     border: 2px solid #fc6130;
   }
+ .u-btn-1:hover{-webkit-filter: brightness(80%); }
+ .u-image-8:hover{-webkit-filter: brightness(80%); }
 </style>
 
 <script>

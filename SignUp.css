@@ -1,3 +1,7 @@
+body {
+   height: 100%;
+   overflow-y: hidden;
+}
 .u-section-1 .u-sheet-1 {
   min-height: 1354px;
 }
@@ -89,6 +93,7 @@
 
 .u-section-1 .u-form-group-6 {
   margin-left: 0;
+
 }
 
 .u-section-1 .u-label-6 {
@@ -574,7 +579,7 @@
     font-size: 0.625rem;
     font-weight: 600;
     width: 242px;
-    margin-top: 16px;
+    margin-top: 34px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -595,7 +600,7 @@
   }
 
   .u-section-1 .u-input-2 {
-    font-size: 0.875rem;
+    font-size: 0.7rem;
   }
 
   .u-section-1 .u-form-3 {
@@ -605,8 +610,9 @@
   }
 
   .u-section-1 .u-input-3 {
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     height: 40px;
+    font-weight: 600;
   }
 
   .u-section-1 .u-form-4 {
@@ -617,7 +623,8 @@
 
   .u-section-1 .u-input-4 {
     height: 40px;
-    font-size: 0.875rem;
+    font-size: 0.7rem;
+    font-weight: 600;
   }
 
   .u-section-1 .u-form-5 {
@@ -628,7 +635,8 @@
 
   .u-section-1 .u-input-5 {
     height: 40px;
-    font-size: 0.875rem;
+    font-size: 0.7rem;
+    font-weight: 600;
   }
 
   .u-section-1 .u-form-6 {
@@ -648,6 +656,7 @@
   .u-section-1 .u-btn-1 {
     margin-top: 60px;
     padding: 0;
+    
   }
 
   .u-section-1 .u-icon-1 {
@@ -693,7 +702,7 @@
   }
 
   .u-dialog-section-4 .u-image-3 {
-    width: 175px;
+    width: 162px;
     height: 66px;
     margin-top: -464px;
     margin-left: auto;
@@ -737,12 +746,12 @@
   }
 
   .u-dialog-section-4 .u-text-2 {
-    margin-top: -249px;
+    margin-top: -251px;
     margin-left: 127px;
   }
 
   .u-dialog-section-4 .u-text-3 {
-    margin-top: 38px;
+    margin-top: 36px;
     margin-left: auto;
   }
 
@@ -752,7 +761,7 @@
   }
 
   .u-dialog-section-4 .u-text-5 {
-    margin-top: 34px;
+    margin-top: 38px;
     margin-left: auto;
   }
 
