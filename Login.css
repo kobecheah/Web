@@ -48,8 +48,8 @@
 }
 
 .u-section-1 .u-label-3 {
-  font-weight: 600;
-  font-size: 0.625rem;
+  font-weight: 400;
+  font-size: 0.7rem;
 }
 
 .u-block-b81c-18 {
@@ -206,7 +206,7 @@
 
   .u-section-1 .u-input-1 {
     height: 50px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .u-section-1 .u-form-2 {
@@ -217,6 +217,7 @@
 
   .u-section-1 .u-input-2 {
     height: 50px;
+    font-weight: 700;
     font-size: 0.875rem;
   }
 
@@ -239,7 +240,7 @@
 
   .u-section-1 .u-text-2 {
     font-size: 0.875rem;
-    margin-top: -157px;
+    margin-top: -142px;
     margin-right: auto;
     margin-left: calc(((100% - 340px) / 2) + 44px);
   }
