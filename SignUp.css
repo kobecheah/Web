@@ -339,18 +339,27 @@ body {
 
   .u-section-1 .u-icon-1 {
     font-size: 4em;
+    bottom: 40px;
   }
+.error-message-agreeError{
+  left: 162px;
 
+}
+.error-message-survey{
+    left: 324px;
+    top: -118px;
+    right: 31px;
+}
   .u-section-1 .u-image-3 {
     width: 25px;
     height: 14px;
-    margin-top: -394px;
+    margin-top: -416px;
   }
 
   .u-section-1 .u-image-4 {
     width: 25px;
     height: 14px;
-    margin-top: 62px;
+    margin-top: 74px;
   }
   .u-dialog-section-4 .u-dialog-1 {
     width: 731px;
@@ -379,8 +388,8 @@ body {
   }
 
   .u-dialog-section-4 .u-image-3 {
-    width: 176px;
-    height: 65px;
+    width: 170px;
+    height: 73px;
     margin-top: -682px;
     margin-left: 271px;
   }
@@ -394,7 +403,7 @@ body {
   .u-dialog-section-4 .u-image-4 {
     width: 250px;
     height: 51px;
-    margin-top: 31px;
+    margin-top: 22px;
     margin-left: 234px;
   }
 
@@ -417,8 +426,8 @@ body {
   }
 
   .u-dialog-section-4 .u-text-2 {
-    margin-top: -288px;
-    margin-left: 319px;
+    margin-top: -290px;
+    margin-left: 321px;
   }
 
   .u-dialog-section-4 .u-text-3 {
@@ -430,7 +439,8 @@ body {
   }
 
   .u-dialog-section-4 .u-text-5 {
-    margin-top: 48px;
+    margin-top: 46px;
+    margin-left: 325px;
   }
 
   .u-dialog-section-4 .u-text-6 {
@@ -440,7 +450,7 @@ body {
 
   .u-dialog-section-4 .u-image-8 {
     height: 44px;
-    margin-top: -98px;
+    margin-top: -103px;
   }
 }
 
@@ -560,6 +570,11 @@ body {
 }
 
 @media (max-width: 575px) {
+
+  .error-message-agreeError{
+    left: -15px;
+  
+  }
   .u-section-1 .u-sheet-1 {
     min-height: 728px;
   }

@@ -141,6 +141,11 @@
 }
 
 @media (max-width: 991px) {
+
+  .error-message-pass{
+    width: 350px;
+  }
+
   .u-dialog-section-4 .u-dialog-1 {
     width: 731px;
     min-height: 1085px;
@@ -217,6 +222,7 @@
 
   .u-section-1 .u-input-2 {
     height: 55px;
+    font-size: .825rem;
   }
 
   .u-section-1 .u-form-3 {
@@ -250,7 +256,7 @@
   .u-section-1 .u-image-3 {
     width: 20px;
     height: 20px;
-    margin-top: -416px;
+    margin-top: -430px;
     margin-right: calc(((100% - 720px) / 2) + 201px);
   }
 }
@@ -307,7 +313,9 @@
 }
 
 @media (max-width: 575px) {
-
+  .error-message-pass{
+    width: 284px;
+  }
   .u-dialog-section-4 .u-dialog-1 {
     width: 340px;
     margin-top: 15px;
