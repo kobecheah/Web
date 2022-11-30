@@ -37,7 +37,8 @@
             <input type="text" id="name-e9a0" name="name"
               class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-white u-input-1 u-input-3"
               required="required" placeholder="Full Name as per NRIC /Passport">
-              <div id ="nameError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px; " class="error-message-name"> </div>
+            <div id="nameError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px; "
+              class="error-message-name"> </div>
           </div>
         </form>
       </div>
@@ -62,7 +63,8 @@
                 viewBox="0 0 16 16" style="fill:currentColor;color:#ff3d00;top: 40%;" xml:space="preserve">
                 <polygon class="st0" points="8,12 2,4 14,4 "></polygon>
               </svg>
-              <div id ="ageError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px;"  class="error-message-age"></div>
+              <div id="ageError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px;"
+                class="error-message-age"></div>
             </div>
           </div>
         </form>
@@ -75,7 +77,8 @@
             <input type="text" id="name-e9a0" name="email"
               class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-text-black u-white u-input-3"
               required="required" placeholder="Email">
-              <div id ="emailError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px;" class="error-message-email"></div>
+            <div id="emailError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px;"
+              class="error-message-email"></div>
           </div>
         </form>
       </div>
@@ -87,7 +90,8 @@
             <input type="password" id="password" name="password"
               class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-text-black u-white u-input-4"
               required="required" placeholder="Password">
-              <div id ="passError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px;" class="error-message-pass"></div>
+            <div id="passError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px;"
+              class="error-message-pass"></div>
           </div>
         </form>
       </div>
@@ -99,7 +103,8 @@
             <input type="password" id="confirmPass" name="confirmPass" onChange="onChange();"
               class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-text-black u-white u-input-5"
               required="required" placeholder="Confirm Password">
-              <div id ="cnpassError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px; " class="error-message-cnpass"></div>
+            <div id="cnpassError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px; "
+              class="error-message-cnpass"></div>
           </div>
         </form>
       </div>
@@ -108,18 +113,20 @@
           style="padding: 0px;">
           <div class="u-form-checkbox u-form-group u-form-group-6">
             <input style="height: 10px;" type="checkbox" id="checkbox-fa2a" name="checkbox" value="On">
-            <label for="checkbox-fa2a" class="u-custom-font u-heading-font u-label u-label-6"> I've read and agree to <a  href="https://google.com"><span><u>Terms of Service and Privacy Policy</u> </span></a> </label>
-          </div>  
+            <label for="checkbox-fa2a" class="u-custom-font u-heading-font u-label u-label-6"> I've read and agree to <a
+                href="https://google.com"><span><u>Terms of Service and Privacy Policy</u> </span></a> </label>
+          </div>
         </form>
       </div>
-         <div id ="agreeError" style="color: red; font-size: 10px; height: 14px; margin-bottom: -16px; margin-left: 54px;"  class="error-message-agreeError"></div>
+      <div id="agreeError" style="color: red; font-size: 10px; height: 14px; margin-bottom: -16px; margin-left: 54px;"
+        class="error-message-agreeError"></div>
       <a id="playNow" class="u-border-none u-btn u-button-style u-none u-btn-1"><span
-          class="u-file-icon u-icon u-icon-1"><img style="margin-bottom: 15px;" onclick="return Checking();" src="images/Playnowbutton.png"
-            alt=""></span>&nbsp;
+          class="u-file-icon u-icon u-icon-1"><img style="margin-bottom: 15px;" onclick="return Checking();"
+            src="images/Playnowbutton.png" alt=""></span>&nbsp;
       </a>
-      <img onclick="ShowPass();" class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3"
+      <img id="passImg" onclick="ShowPass();" class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3"
         src="images/Element1.png" alt="" data-image-width="71" data-image-height="41">
-      <img onclick="ShowConfirmPass();" class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4"
+      <img  id="cnpassImg" onclick="ShowConfirmPass();" class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4"
         src="images/Element1.png" alt="" data-image-width="71" data-image-height="41">
     </div>
   </section>
@@ -168,7 +175,8 @@
         Prefer Cash</h6>
     </div>
   </div>
-  <div id ="surveyError" style="color: red; font-size: 10px; margin-left: 121px; height: 14px; bottom: 218px;"  class="error-message-survey"></div>
+  <div id="surveyError" style="color: red; font-size: 10px; margin-left: 121px; height: 14px; bottom: 218px;"
+    class="error-message-survey"></div>
   <img id="Submitbutton" class="u-image u-image-default u-image-8" src="images/Submitbutton.png"
     onclick="SubmitSurvey()" alt="" data-image-width="394" data-image-height="122">
 </section>
@@ -189,15 +197,8 @@
       </h6>
       <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-2">Please check the verification
         email&nbsp;<br>in your inbox to verify your account
-      </h6> 
-    </div><button class="u-dialog-close-button u-icon u-text-custom-color-6 u-icon-1"><svg class="u-svg-link"
-        preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-efe9"></use>
-      </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-        xml:space="preserve" class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-efe9">
-        <rect x="7" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="2" height="16"></rect>
-        <rect x="0" y="7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="16" height="2"></rect>
-      </svg></button>
+      </h6>
+    </div>
   </div>
   <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="images/closebutton.png"
     alt="" data-image-width="100" data-image-height="100">
@@ -462,7 +463,10 @@
       return false;
     }
     else {
-      
+      document.getElementById('nameError').innerHTML = "";
+      document.getElementById('emailError').innerHTML = "";
+      document.getElementById('ageError').innerHTML = "";
+      document.getElementById('cnpassError').innerHTML = "";
       document.getElementById('agreeError').innerHTML = "Please check terms and conditions.";
     }
 
@@ -510,11 +514,11 @@
     var myBody = {
       "name": name,
       "email": email,
-      "age_group": agegroup.options[agegroup.selectedIndex].text =="Age"?"":agegroup.options[agegroup.selectedIndex].text,
+      "age_group": agegroup.options[agegroup.selectedIndex].text == "Age" ? "" : agegroup.options[agegroup.selectedIndex].text,
       "password": password,
       "password_confirmation": confirm,
       "payment_method": SurveyNew,
-      "checking":false,
+      "checking": false,
       "url": appUrl + "EmailVerified.html" + (params == null ? "" : params),
     };
     fetch(apiDomain + 'api/register',
@@ -531,9 +535,10 @@
         if (status === false) {
           var x = document.getElementById("sec-b5d3");
           x.style.display = "block";
-          if(jsondata.errors.payment_method)
-          {
-            document.getElementById('surveyError').innerHTML = JSON.stringify(jsondata.errors.payment_method).replaceAll('"',"");
+
+          if (jsondata.errors.payment_method) {
+
+            document.getElementById('surveyError').innerHTML = JSON.stringify(jsondata.errors.payment_method).replaceAll('"', "");
           }
         }
         else {
@@ -568,11 +573,11 @@
     var myBody = {
       "name": name,
       "email": email,
-      "age_group": agegroup.options[agegroup.selectedIndex].text =="Age"?"":agegroup.options[agegroup.selectedIndex].text,
+      "age_group": agegroup.options[agegroup.selectedIndex].text == "Age" ? "" : agegroup.options[agegroup.selectedIndex].text,
       "password": password,
       "password_confirmation": confirm,
       "payment_method": SurveyNew,
-      "checking":true,
+      "checking": true,
       "url": appUrl + "EmailVerified.html" + (params == null ? "" : params),
     };
     fetch(apiDomain + 'api/register',
@@ -589,29 +594,25 @@
         if (status === false) {
           var x = document.getElementById("sec-b5d3");
           x.style.display = "none";
-          if(jsondata.errors.name)
-          {
-            document.getElementById('nameError').innerHTML = JSON.stringify(jsondata.errors.name).replaceAll('"',"");
+          if (jsondata.errors.name) {
+            document.getElementById('nameError').innerHTML = JSON.stringify(jsondata.errors.name).replaceAll('"', "");
           }
-          else{ document.getElementById('nameError').innerHTML = ""}
+          else { document.getElementById('nameError').innerHTML = "" }
 
-          if(jsondata.errors.email)
-          {
-            document.getElementById('emailError').innerHTML = JSON.stringify(jsondata.errors.email).replaceAll('"',"");
+          if (jsondata.errors.email) {
+            document.getElementById('emailError').innerHTML = JSON.stringify(jsondata.errors.email).replaceAll('"', "");
           }
-          else{ document.getElementById('emailError').innerHTML = ""}
+          else { document.getElementById('emailError').innerHTML = "" }
 
-          if(jsondata.errors.age_group)
-          {
-            document.getElementById('ageError').innerHTML = JSON.stringify(jsondata.errors.age_group).replaceAll('"',"");
+          if (jsondata.errors.age_group) {
+            document.getElementById('ageError').innerHTML = JSON.stringify(jsondata.errors.age_group).replaceAll('"', "");
           }
-          else{ document.getElementById('ageError').innerHTML = ""}
+          else { document.getElementById('ageError').innerHTML = "" }
 
-          if(jsondata.errors.password)
-          {
-            document.getElementById('cnpassError').innerHTML = JSON.stringify(jsondata.errors.password).replaceAll('"',"");
+          if (jsondata.errors.password) {
+            document.getElementById('cnpassError').innerHTML = JSON.stringify(jsondata.errors.password).replaceAll('"', "");
           }
-          else{ document.getElementById('cnpassError').innerHTML = ""}
+          else { document.getElementById('cnpassError').innerHTML = "" }
           // alert(JSON.stringify(jsondata.errors.error));
         }
         else {
@@ -624,11 +625,26 @@
 
   function ShowPass() {
     var s = document.getElementById("password");
+
+    if (document.getElementById("passImg").getAttribute("src") === "images/Element1.png") 
+    {
+      document.getElementById("passImg").src = "images/Unviewpassword.png";
+    }
+    else {
+      document.getElementById("passImg").src = "images/Element1.png"
+    }
     s.type = s.type == "password" ? "text" : "password";
 
   }
   function ShowConfirmPass() {
     var s = document.getElementById("confirmPass");
+    if (document.getElementById("cnpassImg").getAttribute("src") === "images/Element1.png") 
+    {
+      document.getElementById("cnpassImg").src = "images/Unviewpassword.png";
+    }
+    else {
+      document.getElementById("cnpassImg").src = "images/Element1.png"
+    }
     s.type = s.type == "password" ? "text" : "password";
 
   }

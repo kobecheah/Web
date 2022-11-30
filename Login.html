@@ -58,14 +58,18 @@
           <label for="checkbox-ad46" class="u-label u-label-3">Remember Me</label>
         </div>
       </form>
+      <div id="passError"
+        style="color: red; font-size: 12px; width:284px; font-weight: 600; margin-left: -3px; height: 19px; margin-top: 12px;"
+        class="error-message-pass"></div>
     </div>
     <h5 class="u-text u-text-custom-color-4 u-text-default-xs u-text-2"></h5>
     <a style="top: 8px;" onclick="Submit()" type="submit" value="submit" name="submit"
       class="u-align-center-xs u-border-none u-btn u-button-style u-none u-btn-1"><span
-        class="u-file-icon u-icon u-icon-1"><img src="images/loginnowbutton.png"></span></a>
-    <img onclick="ShowPass();" class="u-image u-image-contain u-image-default u-image-3" src="images/Element1.png"
+        class="u-file-icon u-icon u-icon-1"><img style="margin-top: -21px;margin-bottom: 37px;" src="images/loginnowbutton.png"></span></a>
+    <img id="passImg" onclick="ShowPass();" class="u-image u-image-contain u-image-default u-image-3" src="images/Element1.png"
       style="top:-3px;" alt="" data-image-width="71" data-image-height="41">
     <a href="./ForgotPassword.html" class="u-text u-text-custom-color-4 u-text-1">Forgot Password</a>
+
   </section>
 
   <section
@@ -90,204 +94,260 @@
         </h6>
       </div>
   </section>
-  <style>
-    .u-dialog-section-4 {
-      min-height: 500px;
+
+  <section
+  class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-xl u-dialog-section-5"
+  id="verifyPop" data-dialog-show-on="page_exit" data-dialog-show-interval="3000" data-dialog-show-on-list="161976806">
+  <img class="u-image u-image-contain u-image-default u-image-1" src="images/verifyemailbgframe.png" alt=""
+    data-image-width="904" data-image-height="808">
+  <div
+    class="u-align-justify-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-container-style u-dialog u-opacity u-opacity-5 u-shape-rectangle u-white u-dialog-1">
+    <div class="u-container-layout u-valign-top-lg u-valign-top-xl u-container-layout-1">
+      <a href="https://nicepage.com/one-page-template" class="u-border-none u-btn u-button-style u-none u-btn-1">
+        &nbsp;</a>
+      <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-1">Account Not Verify
+      </h6>
+      <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-2">Please check the verification
+        email&nbsp;<br>in your inbox to verify your account
+      </h6>
+    </div>
+  </div>
+  <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="images/closebutton.png"
+    alt="" data-image-width="100" data-image-height="100">
+  <img onclick="BackLoginPage()" class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3"
+    src="images/closebutton.png" alt="" data-image-width="100" data-image-height="100">
+  <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4" src="images/emailicon.png"
+    alt="" data-image-width="321" data-image-height="321">
+</section>
+<style>
+  .u-dialog-section-5 {
+    min-height: 1154px;
+  }
+
+  .u-dialog-section-5 .u-image-1 {
+    width: 539px;
+    height: 504px;
+    margin: 429px calc(((100% - 720px) / 2) + 85px) 0 auto;
+  }
+
+  .u-dialog-section-5 .u-dialog-1 {
+    width: 800px;
+    margin: -613px auto 0;
+  }
+
+  .u-dialog-section-5 .u-container-layout-1 {
+    padding: 30px;
+  }
+
+  .u-dialog-section-5 .u-btn-1 {
+    border-style: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 311px auto 0;
+    padding: 0;
+  }
+
+  .u-dialog-section-5 .u-text-1 {
+    width: auto;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin: -469px -231px 0 auto;
+  }
+
+  .u-dialog-section-5 .u-text-2 {
+    font-size: 1.875rem;
+    width: auto;
+    font-weight: 500;
+    margin: 7px -433px 0 809px;
+  }
+
+  .u-dialog-section-5 .u-icon-1 {
+    width: 20px;
+    height: 20px;
+  }
+
+  .u-dialog-section-5 .u-image-2 {
+    width: 45px;
+    height: 45px;
+    margin: -988px calc(((100% - 340px) / 2) + 55px) 60px auto;
+  }
+
+  .u-dialog-section-5 .u-image-3 {
+    width: 65px;
+    height: 65px;
+    margin: 362px calc(((100% - 720px) / 2) + 75px) 60px auto;
+  }
+
+  .u-dialog-section-5 .u-image-4 {
+    width: 212px;
+    height: 212px;
+    margin: 111px auto 0;
+  }
+
+  @media (max-width: 991px) {
+    .u-dialog-section-5 {
+      min-height: 1332px;
     }
 
-    .u-dialog-section-4 .u-dialog-1 {
-      width: 800px;
-      min-height: 471px;
-      margin: 60px auto;
+    .u-dialog-section-5 .u-image-1 {
+      width: 539px;
+      margin-top: 263px;
+      margin-right: auto;
     }
 
-    .u-dialog-section-4 .u-container-layout-1 {
-      padding: 30px;
+    .u-dialog-section-5 .u-dialog-1 {
+      width: 720px;
+      height: auto;
+      min-height: 835px;
+      margin-top: -643px;
     }
 
-    .u-dialog-section-4 .u-image-1 {
-      width: 366px;
-      height: 327px;
-      margin: -210px -400px 0 auto;
-    }
-
-    .u-dialog-section-4 .u-image-2 {
-      width: 204px;
-      height: 172px;
-      margin: -682px auto 0;
-    }
-
-    .u-dialog-section-4 .u-btn-1 {
-      border-style: none;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 162px auto 0;
+    .u-dialog-section-5 .u-container-layout-1 {
       padding: 0;
     }
 
-    .u-dialog-section-4 .u-icon-1 {
-      font-size: 5.5em;
+    .u-dialog-section-5 .u-btn-1 {
+      margin-top: 717px;
     }
 
-    .u-dialog-section-4 .u-text-1 {
+    .u-dialog-section-5 .u-text-1 {
       font-size: 1.875rem;
+      width: 355px;
+      margin-top: -559px;
+      margin-right: auto;
+    }
+
+    .u-dialog-section-5 .u-text-2 {
+      font-size: 1.5rem;
+      width: 454px;
+      margin-top: 246px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .u-dialog-section-5 .u-image-2 {
+      width: 62px;
+      height: 62px;
+      margin-top: -696px;
+      margin-right: calc(((100% - 720px) / 2) + 72px);
+      margin-bottom: 0;
+    }
+
+    .u-dialog-section-5 .u-image-3 {
+      width: 62px;
+      height: 62px;
+      margin-top: -62px;
+      margin-right: calc(((100% - 720px) / 2) + 72px);
+      margin-bottom: 0;
+    }
+
+    .u-dialog-section-5 .u-image-4 {
+      width: 212px;
+      height: 212px;
+      margin-top: 68px;
+      margin-bottom: 60px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .u-dialog-section-5 .u-image-1 {
+      width: 539px;
+      height: 505px;
+      margin-top: 199px;
+    }
+
+    .u-dialog-section-5 .u-dialog-1 {
+      width: 540px;
+      margin-top: -644px;
+    }
+
+    .u-dialog-section-5 .u-btn-1 {
+      margin-top: 207px;
+    }
+
+    .u-dialog-section-5 .u-text-1 {
+      width: 355px;
+      margin-top: -559px;
+      margin-right: -231px;
+    }
+
+    .u-dialog-section-5 .u-text-2 {
+      width: 454px;
+    }
+
+    .u-dialog-section-5 .u-image-2 {
+      width: 62px;
+      height: 62px;
+      margin-top: -988px;
+      margin-right: calc(((100% - 340px) / 2) + 55px);
+    }
+
+    .u-dialog-section-5 .u-image-3 {
+      width: 62px;
+      height: 62px;
+      margin-top: -62px;
+      margin-right: calc(((100% - 540px) / 2) + 72px);
+    }
+
+    .u-dialog-section-5 .u-image-4 {
+      width: 212px;
+      height: 212px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .u-dialog-section-5 .u-image-1 {
+      width: 291px;
+      height: 275px;
+      margin-top: 186px;
+    }
+
+    .u-dialog-section-5 .u-dialog-1 {
+      width: 338px;
+      margin-top: -447px;
+    }
+
+    .u-dialog-section-5 .u-btn-1 {
+      margin-top: 472px;
+    }
+
+    .u-dialog-section-5 .u-text-1 {
       width: auto;
-      font-weight: 800;
-      margin: -549px 229px 0 212px;
+      font-size: 1.125rem;
+      margin-top: -299px;
+      margin-left: -1px;
+      margin-right: -1px;
     }
 
-    .u-dialog-section-4 .u-text-2 {
-      font-size: 1.875rem;
-      font-weight: 600;
-      width: 364px;
-      margin: 255px auto 0;
+    .u-dialog-section-5 .u-text-2 {
+      font-size: 0.875rem;
+      width: auto;
+      margin-top: 132px;
+      margin-left: 31px;
+      margin-right: 31px;
     }
 
-    .u-dialog-section-4 .u-icon-2 {
-      width: 20px;
-      height: 20px;
+    .u-dialog-section-5 .u-icon-1 {
+      left: auto;
+      top: 35px;
+      position: absolute;
+      right: 16px;
     }
 
-    @media (max-width: 1199px) {
-      .u-dialog-section-4 .u-image-2 {
-        margin-top: -682px;
-      }
-
-      .u-dialog-section-4 .u-text-1 {
-        margin-top: -549px;
-        margin-right: 229px;
-        margin-left: 212px;
-      }
+    .u-dialog-section-5 .u-image-3 {
+      width: 37px;
+      height: 37px;
+      margin-top: 262px;
+      margin-right: calc(((100% - 340px) / 2) + 17px);
     }
 
-    @media (max-width: 991px) {
-      .u-dialog-section-4 .u-dialog-1 {
-        width: 731px;
-        min-height: 1085px;
-        height: auto;
-        margin-right: calc(((100% - 720px) / 2) + -11px);
-      }
-
-      .u-dialog-section-4 .u-container-layout-1 {
-        padding: 0;
-      }
-
-      .u-dialog-section-4 .u-image-1 {
-        height: 551px;
-        margin-top: 3px;
-        margin-right: initial;
-        margin-left: initial;
-        width: auto;
-      }
-
-      .u-dialog-section-4 .u-image-2 {
-        width: 204px;
-        margin-top: -430px;
-      }
-
-      .u-dialog-section-4 .u-btn-1 {
-        margin-top: 183px;
-      }
-
-      .u-dialog-section-4 .u-text-1 {
-        width: 290px;
-        margin-top: -569px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .u-dialog-section-4 .u-text-2 {
-        width: 364px;
-        margin-top: 270px;
-      }
+    .u-dialog-section-5 .u-image-4 {
+      width: 119px;
+      height: 97px;
+      margin-top: 29px;
     }
-
-    @media (max-width: 767px) {
-      .u-dialog-section-4 .u-dialog-1 {
-        width: 540px;
-        margin-right: calc(((100% - 540px) / 2));
-      }
-
-      .u-dialog-section-4 .u-image-1 {
-        height: 551px;
-        margin-top: -269px;
-        width: auto;
-        margin-right: initial;
-        margin-left: initial;
-      }
-
-      .u-dialog-section-4 .u-image-2 {
-        width: 204px;
-        margin-top: -409px;
-      }
-
-      .u-dialog-section-4 .u-btn-1 {
-        margin-top: 162px;
-      }
-
-      .u-dialog-section-4 .u-text-1 {
-        margin-top: -569px;
-      }
-
-      .u-dialog-section-4 .u-text-2 {
-        width: 364px;
-      }
-    }
-
-    @media (max-width: 575px) {
-      .u-dialog-section-4 .u-dialog-1 {
-        width: 340px;
-        margin-top: 15px;
-        margin-right: calc(((100% - 340px) / 2));
-        margin-bottom: 0;
-      }
-
-      .u-dialog-section-4 .u-image-1 {
-        height: 607px;
-        margin-top: 3px;
-        width: auto;
-        margin-right: initial;
-        margin-left: initial;
-      }
-
-      .u-dialog-section-4 .u-image-2 {
-        width: 145px;
-        height: 94px;
-        margin-top: -381px;
-      }
-
-      .u-dialog-section-4 .u-btn-1 {
-        margin-top: 79px;
-      }
-
-      .u-dialog-section-4 .u-icon-1 {
-        font-size: 4em;
-      }
-
-      .u-dialog-section-4 .u-text-1 {
-        font-size: 1.5rem;
-        width: auto;
-        margin-top: -326px;
-        margin-left: 16px;
-        margin-right: 16px;
-      }
-
-      .u-dialog-section-4 .u-text-2 {
-        font-size: 1.25rem;
-        width: auto;
-        margin-top: 140px;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .u-dialog-section-4 .u-icon-2 {
-        left: auto;
-        top: 24px;
-        position: absolute;
-        right: 17px;
-      }
-    }
+  }
   </style>
 </body>
 
@@ -308,6 +368,14 @@
 <script>
   function OpenPopUp() {
     var x = document.getElementById("sec-b5d3");
+    x.style.display = "block";
+    return false;
+  }
+  function BackLoginPage() {
+    window.location.replace("./Login.html");
+  }
+  function OpenVerify() {
+    var x = document.getElementById("verifyPop");
     x.style.display = "block";
     return false;
   }
@@ -344,9 +412,24 @@
       .then(jsondata => {
         var status = jsondata.status;
         if (status === false) {
-          alert(JSON.stringify(jsondata.errors.error));
+          if (jsondata.errors.password) {
+            document.getElementById('passError').style.backgroundColor = '#ffe6e6';
+            document.getElementById('passError').innerHTML = "Invalid email or password";
+          }
+          else if (jsondata.errors.email) {
+            document.getElementById('passError').style.backgroundColor = '#ffe6e6';
+            document.getElementById('passError').innerHTML = "Invalid email or password";
+          }
+          else if (JSON.stringify(jsondata.errors.error).includes("verification")) {
+            document.getElementById('passError').innerHTML = "";
+            document.getElementById('passError').style.backgroundColor = '#ffffff';
+            OpenVerify();
+          }
+          //  alert(JSON.stringify(jsondata.errors.error));
         }
         else {
+          document.getElementById('passError').innerHTML = "";
+          document.getElementById('passError').style.backgroundColor = '#ffffff';
           jsondatas = jsondata;
           OpenPopUp();
         }
@@ -366,6 +449,13 @@
   };
   function ShowPass() {
     var s = document.getElementById("passwordBtn");
+    if (document.getElementById("passImg").getAttribute("src") === "images/Element1.png") 
+    {
+      document.getElementById("passImg").src = "images/Unviewpassword.png";
+    }
+    else {
+      document.getElementById("passImg").src = "images/Element1.png"
+    }
     s.type = s.type == "password" ? "text" : "password";
 
   }
