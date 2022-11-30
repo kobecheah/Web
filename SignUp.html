@@ -37,6 +37,7 @@
             <input type="text" id="name-e9a0" name="name"
               class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-white u-input-1 u-input-3"
               required="required" placeholder="Full Name as per NRIC /Passport">
+              <div id ="nameError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px; " class="error-message-name"> </div>
           </div>
         </form>
       </div>
@@ -58,9 +59,10 @@
               </select>
               <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
-                viewBox="0 0 16 16" style="fill:currentColor;color:#ff3d00" xml:space="preserve">
+                viewBox="0 0 16 16" style="fill:currentColor;color:#ff3d00;top: 40%;" xml:space="preserve">
                 <polygon class="st0" points="8,12 2,4 14,4 "></polygon>
               </svg>
+              <div id ="ageError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px;"  class="error-message-age"></div>
             </div>
           </div>
         </form>
@@ -73,6 +75,7 @@
             <input type="text" id="name-e9a0" name="email"
               class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-text-black u-white u-input-3"
               required="required" placeholder="Email">
+              <div id ="emailError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px;" class="error-message-email"></div>
           </div>
         </form>
       </div>
@@ -84,6 +87,7 @@
             <input type="password" id="password" name="password"
               class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-text-black u-white u-input-4"
               required="required" placeholder="Password">
+              <div id ="passError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px;" class="error-message-pass"></div>
           </div>
         </form>
       </div>
@@ -95,6 +99,7 @@
             <input type="password" id="confirmPass" name="confirmPass" onChange="onChange();"
               class="u-border-1 u-border-grey-30 u-custom-font u-heading-font u-input u-input-rectangle u-radius-50 u-text-black u-white u-input-5"
               required="required" placeholder="Confirm Password">
+              <div id ="cnpassError" style="color: red; font-size: 10px; margin-left: 10px; height: 14px; " class="error-message-cnpass"></div>
           </div>
         </form>
       </div>
@@ -502,7 +507,7 @@
     var myBody = {
       "name": name,
       "email": email,
-      "age_group": agegroup.options[agegroup.selectedIndex].text,
+      "age_group": agegroup.options[agegroup.selectedIndex].text =="Age"?"":agegroup.options[agegroup.selectedIndex].text,
       "password": password,
       "password_confirmation": confirm,
       "payment_method": SurveyNew,
@@ -557,7 +562,7 @@
     var myBody = {
       "name": name,
       "email": email,
-      "age_group": agegroup.options[agegroup.selectedIndex].text,
+      "age_group": agegroup.options[agegroup.selectedIndex].text =="Age"?"":agegroup.options[agegroup.selectedIndex].text,
       "password": password,
       "password_confirmation": confirm,
       "payment_method": SurveyNew,
@@ -578,7 +583,30 @@
         if (status === false) {
           var x = document.getElementById("sec-b5d3");
           x.style.display = "none";
-          alert(JSON.stringify(jsondata.errors.error));
+          if(jsondata.errors.name)
+          {
+            document.getElementById('nameError').innerHTML = JSON.stringify(jsondata.errors.name).replaceAll('"',"");
+          }
+          else{ document.getElementById('nameError').innerHTML = ""}
+
+          if(jsondata.errors.email)
+          {
+            document.getElementById('emailError').innerHTML = JSON.stringify(jsondata.errors.email).replaceAll('"',"");
+          }
+          else{ document.getElementById('emailError').innerHTML = ""}
+
+          if(jsondata.errors.age_group)
+          {
+            document.getElementById('ageError').innerHTML = JSON.stringify(jsondata.errors.age_group).replaceAll('"',"");
+          }
+          else{ document.getElementById('ageError').innerHTML = ""}
+
+          if(jsondata.errors.password)
+          {
+            document.getElementById('cnpassError').innerHTML = JSON.stringify(jsondata.errors.password).replaceAll('"',"");
+          }
+          else{ document.getElementById('cnpassError').innerHTML = ""}
+          // alert(JSON.stringify(jsondata.errors.error));
         }
         else {
           OpenSurvey();

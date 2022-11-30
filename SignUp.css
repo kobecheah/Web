@@ -602,6 +602,7 @@ body {
   .u-section-1 .u-input-2 {
     font-size: 0.7rem;
     font-weight: 600;
+    margin-top: -11px;
   }
 
   .u-section-1 .u-form-3 {
@@ -614,6 +615,7 @@ body {
     font-size: 0.7rem;
     height: 40px;
     font-weight: 600;
+    margin-top: -11px;
   }
 
   .u-section-1 .u-form-4 {
@@ -626,6 +628,7 @@ body {
     height: 40px;
     font-size: 0.7rem;
     font-weight: 600;
+    margin-top: -11px;
   }
 
   .u-section-1 .u-form-5 {
@@ -638,6 +641,7 @@ body {
     height: 40px;
     font-size: 0.7rem;
     font-weight: 600;
+    margin-top: -11px;
   }
 
   .u-section-1 .u-form-6 {
@@ -667,14 +671,14 @@ body {
   .u-section-1 .u-image-3 {
     width: 20px;
     height: 10px;
-    margin-top: -263px;
+    margin-top: -283px;
     margin-right: 50px;
   }
 
   .u-section-1 .u-image-4 {
     width: 20px;
     height: 10px;
-    margin-top: 43px;
+    margin-top: 47px;
     margin-right: 50px;
   }
   .u-dialog-section-4 .u-dialog-1 {
