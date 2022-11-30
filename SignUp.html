@@ -168,6 +168,7 @@
         Prefer Cash</h6>
     </div>
   </div>
+  <div id ="surveyError" style="color: red; font-size: 10px; margin-left: 121px; height: 14px; bottom: 218px;"  class="error-message-survey"></div>
   <img id="Submitbutton" class="u-image u-image-default u-image-8" src="images/Submitbutton.png"
     onclick="SubmitSurvey()" alt="" data-image-width="394" data-image-height="122">
 </section>
@@ -527,11 +528,14 @@
         var status = jsondata.status;
         if (status === false) {
           var x = document.getElementById("sec-b5d3");
-          x.style.display = "none";
-          alert(JSON.stringify(jsondata.errors.error));
+          x.style.display = "block";
+          if(jsondata.errors.payment_method)
+          {
+            document.getElementById('surveyError').innerHTML = JSON.stringify(jsondata.errors.payment_method).replaceAll('"',"");
+          }
         }
         else {
-      
+          OpenVerify();
 
         }
       })
