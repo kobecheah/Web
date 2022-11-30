@@ -108,11 +108,11 @@
           style="padding: 0px;">
           <div class="u-form-checkbox u-form-group u-form-group-6">
             <input style="height: 10px;" type="checkbox" id="checkbox-fa2a" name="checkbox" value="On">
-            <label for="checkbox-fa2a" class="u-custom-font u-heading-font u-label u-label-6"> I've read and agree to <a
-                href="https://google.com"><span><u>Terms of Service and Privacy Policy</u> </span></a> </label>
-          </div>
+            <label for="checkbox-fa2a" class="u-custom-font u-heading-font u-label u-label-6"> I've read and agree to <a  href="https://google.com"><span><u>Terms of Service and Privacy Policy</u> </span></a> </label>
+          </div>  
         </form>
       </div>
+         <div id ="agreeError" style="color: red; font-size: 10px; height: 14px; margin-bottom: -16px; margin-left: 54px;"  class="error-message-agreeError"></div>
       <a id="playNow" class="u-border-none u-btn u-button-style u-none u-btn-1"><span
           class="u-file-icon u-icon u-icon-1"><img style="margin-bottom: 15px;" onclick="return Checking();" src="images/Playnowbutton.png"
             alt=""></span>&nbsp;
@@ -189,7 +189,7 @@
       </h6>
       <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-2">Please check the verification
         email&nbsp;<br>in your inbox to verify your account
-      </h6>
+      </h6> 
     </div><button class="u-dialog-close-button u-icon u-text-custom-color-6 u-icon-1"><svg class="u-svg-link"
         preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-efe9"></use>
@@ -456,12 +456,14 @@
 <script>
   function OpenSurvey() {
     if (document.getElementById('checkbox-fa2a').checked) {
+      document.getElementById('agreeError').innerHTML = "";
       var x = document.getElementById("sec-b5d3");
       x.style.display = "block";
       return false;
     }
     else {
-      alert("Please check terms and conditions.");
+      
+      document.getElementById('agreeError').innerHTML = "Please check terms and conditions.";
     }
 
   }
