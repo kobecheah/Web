@@ -57,7 +57,7 @@ mobileAndTabletCheck = function () {
     
 }
 window.onload = mobileAndTabletCheck();
-preventBack();
-function preventBack(){window.history.forward();}
-    setTimeout("preventBack()", 0);
-window.onunload=function(){null};
+// preventBack();
+// function preventBack(){window.history.forward();}
+//     setTimeout("preventBack()", 0);
+// window.onunload=function(){null};
