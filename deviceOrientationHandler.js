@@ -21,9 +21,12 @@ if (isIOS) {
 }
 else {
     updateRotateDeviceCanvas(isAndroidLandscape());
-    window.addEventListener("resize", (event) => {
+    landscape.addEventListener("change", function (e) {
         updateRotateDeviceCanvas(isAndroidLandscape());
     });
+    // window.addEventListener("resize", (event) => {
+    //     updateRotateDeviceCanvas(isAndroidLandscape());
+    // });
 }
 
 function isAndroidLandscape() {
