@@ -54,17 +54,10 @@ mobileAndTabletCheck = function () {
 
         window.location.href = "./PhoneValidate.html";
     }
-
+    
 }
 window.onload = mobileAndTabletCheck();
-window.history.forward();
-function noBack() {
-    window.history.forward();
-}
-function preventBack() {
-    window.history.forward();
-}
-
-setTimeout("preventBack()", 0);
-
-window.onunload = function () { null };
+preventBack();
+function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+window.onunload=function(){null};
