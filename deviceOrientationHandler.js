@@ -12,8 +12,19 @@ appendRotateDeviceCanvas();
 let matchMediaQuery = "(orientation: landscape)";
 let landscape = window.matchMedia(matchMediaQuery);
 
-updateRotateDeviceCanvas(landscape.matches);
+checkOrientation(landscape.matches);
 
 landscape.addEventListener("change", function (e) {
-    updateRotateDeviceCanvas(e.matches);
+    checkOrientation(e.matches);
 });
+
+function checkOrientation(display) {
+    if (display) {
+        if (screen.availWidth > screen.availHeight) {
+            updateRotateDeviceCanvas(true);
+        }
+    }
+    else {
+        updateRotateDeviceCanvas(false);
+    }
+}
