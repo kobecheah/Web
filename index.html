@@ -122,6 +122,10 @@
         });
       };
       document.body.appendChild(script);
+      document.addEventListener("backbutton", onBackKeyDown, false);
+      function onBackKeyDown(e) {
+        e.preventDefault();
+      }
     </script>
   </div>
   <script src="./deviceOrientationHandler.js"></script>
