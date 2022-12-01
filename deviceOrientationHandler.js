@@ -3,8 +3,7 @@ function appendRotateDeviceCanvas() {
     document.getElementsByTagName("body")[0].insertAdjacentHTML("afterbegin", str);
 }
 
-function updateRotateDeviceCanvas(landscapeMediaMatcher) {
-    var display = (isIOS ? isIosLandscape(landscapeMediaMatcher) : isAndroidLandscape())
+function updateRotateDeviceCanvas(display) {
     document.getElementById('treasure-hunt-landscape-overlay').style.display = display ? 'flex' : 'none';
     document.getElementById('treasure-hunt-content').style.display = display ? 'none' : 'block';
 }
@@ -14,11 +13,18 @@ appendRotateDeviceCanvas();
 var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 let landscape = window.matchMedia("(orientation: landscape)");
 
-updateRotateDeviceCanvas(landscape);
-
-landscape.addEventListener("change", function (e) {
-    updateRotateDeviceCanvas(e);
-});
+if (isIOS) {
+    updateRotateDeviceCanvas(isIosLandscape(landscape));
+    landscape.addEventListener("change", function (e) {
+        updateRotateDeviceCanvas(isIosLandscape(e));
+    });
+}
+else {
+    updateRotateDeviceCanvas(isAndroidLandscape());
+    window.addEventListener("resize", (event) => {
+        updateRotateDeviceCanvas(isAndroidLandscape());
+    });
+}
 
 function isAndroidLandscape() {
     return screen.availWidth > screen.availHeight;
