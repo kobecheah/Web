@@ -1,30 +1,29 @@
-function updateRotateDeviceCanvas(display) {
-    document.getElementById('treasure-hunt-landscape-overlay').style.display = display ? 'flex' : 'none';
-    document.getElementById('treasure-hunt-content').style.display = display ? 'none' : 'block';
-}
 function appendRotateDeviceCanvas() {
     var str = '<link rel="stylesheet" href="./style.css" /><div id="treasure-hunt-landscape-overlay" style="display: flex"><p>Please rotate your phone to Potrait Mode</p><img src="./images/RotatePhone.png" /></div>';
     document.getElementsByTagName("body")[0].insertAdjacentHTML("afterbegin", str);
 }
 
+function updateRotateDeviceCanvas(landscapeMediaMatcher) {
+    var display = (isIOS ? isIosLandscape(landscapeMediaMatcher) : isAndroidLandscape())
+    document.getElementById('treasure-hunt-landscape-overlay').style.display = display ? 'flex' : 'none';
+    document.getElementById('treasure-hunt-content').style.display = display ? 'none' : 'block';
+}
+
 appendRotateDeviceCanvas();
 
-let matchMediaQuery = "(orientation: landscape)";
-let landscape = window.matchMedia(matchMediaQuery);
+var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+let landscape = window.matchMedia("(orientation: landscape)");
 
-checkOrientation(landscape.matches);
+updateRotateDeviceCanvas(landscape);
 
 landscape.addEventListener("change", function (e) {
-    checkOrientation(e.matches);
+    updateRotateDeviceCanvas(e);
 });
 
-function checkOrientation(display) {
-    if (display) {
-        if (screen.availWidth > screen.availHeight) {
-            updateRotateDeviceCanvas(true);
-        }
-    }
-    else {
-        updateRotateDeviceCanvas(false);
-    }
+function isAndroidLandscape() {
+    return screen.availWidth > screen.availHeight;
+}
+
+function isIosLandscape(match) {
+    return match.matches;
 }
