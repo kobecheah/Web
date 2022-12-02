@@ -427,10 +427,15 @@
             document.getElementById('passError').style.backgroundColor = '#ffe6e6';
             document.getElementById('passError').innerHTML = "Invalid email or password";
           }
+          
           else if (JSON.stringify(jsondata.errors.error).includes("verification")) {
             document.getElementById('passError').innerHTML = "";
             document.getElementById('passError').style.backgroundColor = '#ffffff';
             OpenVerify();
+          }
+          else if (jsondata.errors.errors) {
+            document.getElementById('passError').style.backgroundColor = '#ffe6e6';
+            document.getElementById('passError').innerHTML = "Invalid email or password";
           }
           //  alert(JSON.stringify(jsondata.errors.error));
         }
