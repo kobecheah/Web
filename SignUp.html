@@ -123,7 +123,7 @@
           class="error-message-agreeError"></div>
         <a id="playNow" class="u-border-none u-btn u-button-style u-none u-btn-1"><span
             class="u-file-icon u-icon u-icon-1"><img style="margin-bottom: 15px;" onclick="return Checking();"
-              src="images/Playnowbutton.png" alt=""></span>&nbsp;
+              src="images/Playnowbutton.png" alt=""></span>
         </a>
         <img id="passImg" onclick="ShowPass();"
           class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3" src="images/Element1.png"
@@ -133,86 +133,124 @@
           alt="" data-image-width="71" data-image-height="41">
       </div>
     </section>
+
+    <section
+      class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-xl u-dialog-section-4"
+      id="sec-b5d3" data-dialog-show-on="page_exit" data-dialog-show-interval="3000"
+      data-dialog-show-on-list="161976806">
+      <div
+        class="u-align-justify-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-container-style u-dialog u-opacity u-opacity-5 u-shape-rectangle u-white u-dialog-1">
+        <div class="u-valign-top-lg u-valign-top-xl u-container-layout-1">
+          <img class="u-image u-image-contain u-image-default u-image-1" src="images/Quicksurveybgframe.png" alt=""
+            data-image-width="824" data-image-height="1392">
+          <img class="u-image u-image-default u-image-3" src="images/BeforeWeStart.png" alt="" data-image-width="498"
+            data-image-height="187">
+          <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-1" style="margin-bottom: 19px">
+            Which of the following
+            cashless
+            payment methods do you use?</h6>
+          <div class="answer-container">
+            <img src="images/AnswerColumn.png" class="answer-img" id="survey1" onclick="changeImage('survey1')" alt=""
+              data-image-width="664" data-image-height="147">
+            <h6 class="centered">
+              Debit Card</h6>
+          </div>
+          <div class="answer-container"><img src="images/AnswerColumn.png" class="answer-img" id="survey2"
+              onclick="changeImage('survey2')" alt="" data-image-width="664" data-image-height="147">
+            <h6 class="centered">
+              Credit Card</h6>
+          </div>
+          <div class="answer-container"><img src="images/AnswerColumn.png" class="answer-img" id="survey3"
+              onclick="changeImage('survey3')" alt="" data-image-width="664" data-image-height="147">
+            <h6 class="centered">
+              eWallet</h6>
+          </div>
+          <div class="answer-container"><img src="images/AnswerColumn.png" class="answer-img" id="survey4"
+              onclick="changeImage('survey4')" alt="" data-image-width="664" data-image-height="147">
+            <h6 class="centered">
+              Bank QR</h6>
+          </div>
+          <div class="answer-container"><img src="images/AnswerColumn.png" class="answer-img" id="survey5"
+              onclick="changeImage('survey5')" alt="" data-image-width="664" data-image-height="147">
+            <h6 class="centered">
+              Prefer Cash</h6>
+          </div>
+          <style>
+            .answer-container {
+              position: relative;
+              text-align: center;
+              color: white;
+              width: 210px;
+              height: 46px;
+              margin: auto;
+              margin-top: 10px;
+              margin-bottom: 10px;
+
+            }
+
+            .answer-img {
+              width: 100%;
+            }
+
+            .answer-container .centered {
+              position: absolute;
+              top: 47%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              margin: auto;
+              width: 100%;
+              color: black;
+              font-size: 15px;
+              font-size: 12px;
+              font-weight: bold;
+            }
+          </style>
+        </div>
+      </div>
+
+
+      <div id="surveyError" style="color: red; font-size: 10px; height: 14px; bottom: 218px;"
+        class="error-message-survey">
+      </div>
+      <img id="Submitbutton" class="u-image u-image-default u-image-8" src="images/Submitbutton.png"
+        onclick="SubmitSurvey()" alt="" data-image-width="394" data-image-height="122">
+    </section>
+
+
+    <section
+      class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-xl u-dialog-section-5"
+      id="verifyPop" data-dialog-show-on="page_exit" data-dialog-show-interval="3000"
+      data-dialog-show-on-list="161976806">
+      <img class="u-image u-image-contain u-image-default u-image-1" src="images/verifyemailbgframe.png" alt=""
+        data-image-width="904" data-image-height="808">
+      <div
+        class="u-align-justify-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-container-style u-dialog u-opacity u-opacity-5 u-shape-rectangle u-white u-dialog-1">
+        <div class="u-container-layout u-valign-top-lg u-valign-top-xl u-container-layout-1">
+          <a href="https://nicepage.com/one-page-template" class="u-border-none u-btn u-button-style u-none u-btn-1">
+            &nbsp;</a>
+          <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-1">Thank You&nbsp;<br>For Your
+            Participation
+          </h6>
+          <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-2">Please check the
+            verification
+            email&nbsp;<br>in your inbox to verify your account
+          </h6>
+        </div>
+      </div>
+      <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="images/closebutton.png"
+        alt="" data-image-width="100" data-image-height="100">
+      <img onclick="BackLoginPage()" class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3"
+        src="images/closebutton.png" alt="" data-image-width="100" data-image-height="100">
+      <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4" src="images/emailicon.png"
+        alt="" data-image-width="321" data-image-height="321">
+    </section>
   </div>
   <script src="./deviceOrientationHandler.js"></script>
 </body>
 
 </html>
 
-<section
-  class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-xl u-dialog-section-4"
-  id="sec-b5d3" data-dialog-show-on="page_exit" data-dialog-show-interval="3000" data-dialog-show-on-list="161976806">
-  <div
-    class="u-align-justify-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-container-style u-dialog u-opacity u-opacity-5 u-shape-rectangle u-white u-dialog-1">
-    <div class="u-container-layout u-valign-top-lg u-valign-top-xl u-container-layout-1">
-      <img class="u-image u-image-contain u-image-default u-image-1" src="images/Quicksurveybgframe.png" alt=""
-        data-image-width="824" data-image-height="1392">
-      <img class="u-image u-image-default u-image-2" id="survey1" src="images/AnswerColumn.png"
-        onclick="changeImage('survey1')" alt="" data-image-width="664" data-image-height="147">
-      <a href="https://nicepage.com/one-page-template" class="u-border-none u-btn u-button-style u-none u-btn-1">
-        &nbsp;</a>
-      <img class="u-image u-image-default u-image-3" src="images/BeforeWeStart.png" alt="" data-image-width="498"
-        data-image-height="187">
-      <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-1">Which of the following cashless
-        payment methods do you use?</h6>
-      <img class="u-image u-image-default u-image-4" id="survey2" src="images/AnswerColumn.png"
-        onclick="changeImage('survey2')" alt="" data-image-width="664" data-image-height="147">
-      <img class="u-image u-image-default u-image-5" id="survey3" src="images/AnswerColumn.png"
-        onclick="changeImage('survey3')" alt="" data-image-width="664" data-image-height="147">
-      <img class="u-image u-image-default u-image-6" id="survey4" src="images/AnswerColumn.png"
-        onclick="changeImage('survey4')" alt="" data-image-width="664" data-image-height="147">
-      <img class="u-image u-image-default u-image-7" id="survey5" src="images/AnswerColumn.png"
-        onclick="changeImage('survey5')" alt="" data-image-width="664" data-image-height="147">
-      <h6
-        class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-2">
-        Debit Card</h6>
-      <h6
-        class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-3">
-        Credit Card</h6>
-      <h6
-        class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-4">
-        eWallet</h6>
-      <h6
-        class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-5">
-        Bank QR</h6>
-      <h6
-        class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default-md u-text-default-sm u-text-default-xs u-text-6">
-        Prefer Cash</h6>
-    </div>
 
-  </div>
-  <div id="surveyError" style="color: red; font-size: 10px; height: 14px; bottom: 218px;" class="error-message-survey">
-  </div>
-  <img id="Submitbutton" class="u-image u-image-default u-image-8" src="images/Submitbutton.png"
-    onclick="SubmitSurvey()" alt="" data-image-width="394" data-image-height="122">
-</section>
-
-
-<section
-  class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-xl u-dialog-section-5"
-  id="verifyPop" data-dialog-show-on="page_exit" data-dialog-show-interval="3000" data-dialog-show-on-list="161976806">
-  <img class="u-image u-image-contain u-image-default u-image-1" src="images/verifyemailbgframe.png" alt=""
-    data-image-width="904" data-image-height="808">
-  <div
-    class="u-align-justify-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-container-style u-dialog u-opacity u-opacity-5 u-shape-rectangle u-white u-dialog-1">
-    <div class="u-container-layout u-valign-top-lg u-valign-top-xl u-container-layout-1">
-      <a href="https://nicepage.com/one-page-template" class="u-border-none u-btn u-button-style u-none u-btn-1">
-        &nbsp;</a>
-      <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-1">Thank You&nbsp;<br>For Your
-        Participation
-      </h6>
-      <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-2">Please check the verification
-        email&nbsp;<br>in your inbox to verify your account
-      </h6>
-    </div>
-  </div>
-  <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="images/closebutton.png"
-    alt="" data-image-width="100" data-image-height="100">
-  <img onclick="BackLoginPage()" class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3"
-    src="images/closebutton.png" alt="" data-image-width="100" data-image-height="100">
-  <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4" src="images/emailicon.png"
-    alt="" data-image-width="321" data-image-height="321">
-</section>
 <style>
   .u-dialog-section-5 {
     min-height: 1154px;
@@ -521,7 +559,6 @@
     if (survey3Q != "") { SurveyNew = SurveyNew + survey3Q }
     if (survey4Q != "") { SurveyNew = SurveyNew + survey4Q }
     if (survey5Q != "") { SurveyNew = SurveyNew + survey5Q }
-
 
     var myBody = {
       "name": name,
