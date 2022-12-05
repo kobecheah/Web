@@ -1,5 +1,6 @@
 const apiDomain = "https://api-sekingo-stage.thebluelobby.com/";
 const appUrl = "https://kobecheah.github.io/web/";
+let coordinate = null;
 
 function redirectIfNoLoginRecord(url) {
     if (sessionStorage.getItem('token') != null) {
@@ -33,18 +34,32 @@ function storeParams() {
     }
 }
 
-function openGoogleMap(coordinate) {
+function openMapNavBar(locationCoordinate) {
+    document.getElementById('mapnavbar').style.display = 'block';
+    coordinate = locationCoordinate;
+}
+
+function closeMapNavBar() {
+    document.getElementById('mapnavbar').style.display = 'none';
+    coordinate = null;
+}
+
+function openGoogleMap() {
+    if (coordinate == null)
+        return;
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (isIOS) {
-        window.open('comgooglemapsurl://maps.google.com/?q=@' + coordinate);
+        window.location = ('comgooglemapsurl://maps.google.com/?q=@' + coordinate);
     }
     else {
-        window.open('https://maps.google.com/?q=' + coordinate);
+        window.location = ('https://maps.google.com/?q=' + coordinate);
     }
 }
 
-function openWaze(coordinate) {
-    window.open("https://www.waze.to/?ll=" + coordinate + "&zoom=10");
+function openWaze() {
+    if (coordinate == null)
+        return;
+    window.location = ("https://www.waze.to/?ll=" + coordinate + "&zoom=10");
 }
 
 mobileAndTabletCheck = function () {
@@ -54,7 +69,7 @@ mobileAndTabletCheck = function () {
 
         window.location.href = "./PhoneValidate.html";
     }
-    
+
 }
 window.onload = mobileAndTabletCheck();
 // preventBack();
