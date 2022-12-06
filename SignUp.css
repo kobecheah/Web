@@ -3,7 +3,10 @@ body {
    overflow-y: hidden;
    overflow: hidden;
 }
-
+.wrapgrid{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 .u-section-1 .u-sheet-1 {
   min-height: 1354px;
 }
