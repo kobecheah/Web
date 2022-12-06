@@ -1,7 +1,5 @@
 body {
   height: 100%;
-  position: fixed;
-  left: 10%;
   overflow-y: hidden;
   overflow: hidden;
   overscroll-behavior: contain;
