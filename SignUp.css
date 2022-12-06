@@ -2,8 +2,8 @@ body {
    height: 100%;
    overflow-y: hidden;
    overflow: hidden;
-   overscroll-behavior: contain;
-   overscroll-behavior-y: contain;
+   overscroll-behavior: none;
+   overscroll-behavior-y: none;
 }
 .wrapgrid{
   overflow-x: hidden;
