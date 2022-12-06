@@ -1,5 +1,6 @@
 body {
-  position: fixed;
+   position: fixed;
+   left: 10%;
    height: 100%;
    overflow-y: hidden;
    overflow: hidden;
