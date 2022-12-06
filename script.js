@@ -49,17 +49,17 @@ function openGoogleMap() {
         return;
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (isIOS) {
-        window.location = ('comgooglemapsurl://maps.google.com/?q=@' + coordinate);
+        window.open('comgooglemapsurl://maps.google.com/?q=@' + coordinate);
     }
     else {
-        window.location = ('https://maps.google.com/?q=' + coordinate);
+        window.open('https://maps.google.com/?q=' + coordinate);
     }
 }
 
 function openWaze() {
     if (coordinate == null)
         return;
-    window.location = ("https://www.waze.to/?ll=" + coordinate + "&zoom=10");
+    window.open("https://www.waze.to/?ll=" + coordinate + "&zoom=10");
 }
 
 mobileAndTabletCheck = function () {
