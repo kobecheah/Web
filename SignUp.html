@@ -505,6 +505,9 @@
 </style>
 
 <script>
+  document.ontouchmove = function(event){
+    event.preventDefault();
+}
   function OpenSurvey() {
     if (document.getElementById('checkbox-fa2a').checked) {
       document.getElementById('agreeError').innerHTML = "";
