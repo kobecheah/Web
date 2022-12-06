@@ -4,6 +4,7 @@ body {
    overflow: hidden;
    overscroll-behavior: none;
    overscroll-behavior-y: none;
+   -webkit-overflow-scrolling: auto;
 }
 .wrapgrid{
   overflow-x: hidden;
