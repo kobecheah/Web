@@ -28,9 +28,10 @@ function getCookie(cname) {
 }
 
 function storeParams() {
-    const params = window.location.search;
-    if (params != '') {
-        sessionStorage.setItem("params", params);
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('station')) {
+        let stationId = urlParams.get('station');
+        sessionStorage.setItem("params", '?station=' + stationId);
     }
 }
 
