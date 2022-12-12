@@ -2,7 +2,8 @@
 <html style="font-size: 16px;" lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1, viewport-fit=cover">
   <meta charset="utf-8">
   <meta name="keywords" content="">
   <meta name="description" content="">
@@ -27,8 +28,8 @@
       <img
         class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-contain u-image-default u-image-1"
         src="images/Registerpagebgframe.png" alt="" data-image-width="948" data-image-height="1348">
-      <img style="top: 12px;" class="u-image u-image-contain u-image-default u-image-2" src="images/MainLogo.png"
-        alt="" data-image-width="733" data-image-height="388">
+      <img style="top: 12px;" class="u-image u-image-contain u-image-default u-image-2" src="images/MainLogo.png" alt=""
+        data-image-width="733" data-image-height="388">
       <div class="u-form u-form-1">
         <form action="#" method="POST" class="u-clearfix u-form-spacing-6 u-form-vertical u-inner-form" source="email"
           name="form" style="padding: 0px;">
@@ -427,7 +428,7 @@
             document.getElementById('passError').style.backgroundColor = '#ffe6e6';
             document.getElementById('passError').innerHTML = "Invalid email or password";
           }
-          
+
           else if (JSON.stringify(jsondata.errors.error).includes("verification")) {
             document.getElementById('passError').innerHTML = "";
             document.getElementById('passError').style.backgroundColor = '#ffffff';
