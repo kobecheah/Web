@@ -117,7 +117,7 @@
             <div class="u-form-checkbox u-form-group u-form-group-6">
               <input style="height: 10px;" type="checkbox" id="checkbox-fa2a" name="checkbox" value="On">
               <label for="checkbox-fa2a" class="u-custom-font u-heading-font u-label u-label-6"> I've read and agree to
-                <a href="https://google.com"><span><u>Terms of Service and Privacy Policy</u> </span></a> </label>
+                <a href="https://www.hlb.com.my/content/dam/hlb/my/docs/pdf/Personal/Footer/EN/privacy_notice_en.pdf?icp=hlb-en-all-footer-txt-privacy"><span><u>Terms of Service and Privacy Policy</u> </span></a> </label>
             </div>
           </form>
         </div>
@@ -151,7 +151,7 @@
           <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-1" style="margin-bottom: 19px">
             Which of the following
             cashless
-            payment methods do you use?</h6>
+            payment methods do you use? (Choose all that apply)</h6>
           <div class="answer-container" onclick="changeImage('survey1')">
             <img src="images/AnswerColumn.png" class="answer-img" id="survey1" alt="" data-image-width="664"
               data-image-height="147">
@@ -571,8 +571,8 @@
       "password_confirmation": confirm,
       "payment_method": SurveyNew,
       "checking": false,
-      "url": encodeURIComponent(appUrl + "EmailVerified.html" + (params == null ? "" : params)),
-      "expired_url": encodeURIComponent(appUrl + "Home.html")
+      "url": (appUrl + "EmailVerified.html" + (params == null ? "" : params)),
+      "expired_url": (appUrl + "Home.html")
     };
     fetch(apiDomain + 'api/register',
       {
@@ -631,8 +631,8 @@
       "password_confirmation": confirm,
       "payment_method": SurveyNew,
       "checking": true,
-      "url": encodeURIComponent(appUrl + "EmailVerified.html" + (params == null ? "" : params)),
-      "expired_url": encodeURIComponent(appUrl + "Home.html")
+      "url": (appUrl + "EmailVerified.html" + (params == null ? "" : params)),
+      "expired_url": (appUrl + "Home.html")
     };
     fetch(apiDomain + 'api/register',
       {

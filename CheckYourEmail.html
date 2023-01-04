@@ -45,9 +45,12 @@
 <script>
 
   async function Submit() {
+    const params = sessionStorage.getItem('params');
     var email = new URLSearchParams(window.location.search).get("email");
     var myBody = {
-      "email": email
+      "email": email,
+      "resetpassword_url": (appUrl + "ResetPassword.html"),
+      "redirect_url": (appUrl + "Login.html" + (params == null ? "" : params))
     };
     fetch(apiDomain + 'api/forgot-password',
       {
