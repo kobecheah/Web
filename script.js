@@ -99,8 +99,9 @@ isIpadOs = function () {
     }
 }
 istab = function () {
-    var md = new MobileDetect(window.navigator.userAgent);
-    if( md.tablet() || !md.phone() ) {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
+    if (isTablet){
         window.location.href = "./PhoneValidate.html";
     }
 }
@@ -113,5 +114,3 @@ function onload() {
     isIpadOs();
     istab();
 }
-<script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
-
