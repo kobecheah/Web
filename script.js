@@ -81,9 +81,19 @@ mobileAndTabletCheck = function () {
     }
 
 }
+
+ipadGoogleCheck = function () {
+    if (/CriOS/i.test(navigator.userAgent) && /iphone|ipod|ipad/i.test(navigator.userAgent)) {
+        window.location.href = "./PhoneValidate.html";
+    }
+    else {
+       
+    }
+}
 window.onload = onload();
 
 function onload() {
     //secureWebsite();
     mobileAndTabletCheck();
+    ipadGoogleCheck();
 }
