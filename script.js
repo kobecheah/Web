@@ -113,5 +113,5 @@ function onload() {
     isIpadOs();
     istab();
 }
-
+<script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
 
