@@ -98,6 +98,12 @@ isIpadOs = function () {
        
     }
 }
+istab = function () {
+    var md = new MobileDetect(window.navigator.userAgent);
+    if( md.tablet() || !md.phone() ) {
+        window.location.href = "./PhoneValidate.html";
+    }
+}
 window.onload = onload();
 
 function onload() {
@@ -105,4 +111,7 @@ function onload() {
     mobileAndTabletCheck();
     ipadGoogleCheck();
     isIpadOs();
+    istab();
 }
+
+
