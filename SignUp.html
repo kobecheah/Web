@@ -23,7 +23,7 @@
 <body class="u-body u-xl-mode" data-lang="en">
   <div id='treasure-hunt-content' style="display: block">
     <section class="u-clearfix u-section-1" id="sec-af35">
-      <div class="u-clearfix u-sheet u-valign-top-lg u-valign-top-xl u-sheet-1" style="min-height: 500px;">
+      <div class="u-clearfix u-sheet u-valign-top-lg u-valign-top-xl u-sheet-1" style="min-height: 500px; max-width: 720px;">
         <img
           class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-contain u-image-default u-image-1"
           src="images/Registerpagebgframe.png" alt="" data-image-width="948" data-image-height="1348">
@@ -125,7 +125,7 @@
           style="color: red; font-size: 10px; height: 14px; margin-bottom: -16px; left: 0; text-align: center;"
           class="error-message-agreeError"></div>
         <a id="playNow" class="u-border-none u-btn u-button-style u-none u-btn-1"><span
-            class="u-file-icon u-icon u-icon-1"><img style="margin-bottom: 15px;" onclick="return Checking();"
+            class="u-file-icon u-icon u-icon-1"><img onclick="return Checking();"
               src="images/Playnowbutton.png" alt=""></span>
         </a>
         <img id="passImg" onclick="ShowPass();"
@@ -138,7 +138,7 @@
     </section>
 
     <section
-      class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-xl u-dialog-section-4"
+      class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-dialog-section-4"
       id="sec-b5d3" data-dialog-show-on="page_exit" data-dialog-show-interval="3000"
       data-dialog-show-on-list="161976806">
       <div
@@ -221,14 +221,14 @@
 
 
     <section
-      class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-valign-middle-lg u-valign-middle-xl u-dialog-section-5"
+      class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-55 u-dialog-section-5"
       id="verifyPop" data-dialog-show-on="page_exit" data-dialog-show-interval="3000"
       data-dialog-show-on-list="161976806">
       <img class="u-image u-image-contain u-image-default u-image-1" src="images/verifyemailbgframe.png" alt=""
         data-image-width="904" data-image-height="808">
       <div
         class="u-align-justify-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-container-style u-dialog u-opacity u-opacity-5 u-shape-rectangle u-white u-dialog-1">
-        <div class="u-container-layout u-valign-top-lg u-valign-top-xl u-container-layout-1">
+        <div class="u-container-layout u-valign-top-lg u-valign-top-xl u-container-layout-1" style="background-color: #00000000;">
           <a href="https://nicepage.com/one-page-template" class="u-border-none u-btn u-button-style u-none u-btn-1">
             &nbsp;</a>
           <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-1">Thank You&nbsp;<br>For Your
@@ -320,7 +320,7 @@
     margin: 111px auto 0;
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: 2000px) {
     .u-dialog-section-5 {
       min-height: 1332px;
     }
@@ -332,7 +332,7 @@
     }
 
     .u-dialog-section-5 .u-dialog-1 {
-      width: 720px;
+      width: 100%;
       height: auto;
       min-height: 835px;
       margin-top: -643px;
@@ -386,7 +386,7 @@
   }
 
   @media (max-width: 767px) {
-    .u-dialog-section-5 .u-image-1 {
+    /* .u-dialog-section-5 .u-image-1 {
       width: 539px;
       height: 505px;
       margin-top: 199px;
@@ -428,14 +428,16 @@
     .u-dialog-section-5 .u-image-4 {
       width: 212px;
       height: 212px;
-    }
+    } */
   }
 
   @media (max-width: 575px) {
 
+    .u-dialog-section-4 .u-container-layout-1 {
+      display: block;
+    }
     .error-message-survey {
-      left: 101px;
-      top: -217px;
+      top:  -211px;;
     }
 
     .u-dialog-section-5 .u-image-1 {
@@ -474,6 +476,13 @@
       top: 35px;
       position: absolute;
       right: 16px;
+    }
+
+    .u-dialog-section-5 .u-image-2 {
+      width: 62px;
+      height: 62px;
+      margin-top: -988px;
+      margin-right: calc(((100% - 340px) / 2) + 55px);
     }
 
     .u-dialog-section-5 .u-image-3 {

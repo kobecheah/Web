@@ -257,7 +257,7 @@ body {
   height: 44px;
   margin: -121px auto 60px;
 }
-@media (max-width: 991px) {
+@media (max-width: 2000px) {
   .u-section-1 .u-image-1 {
     margin-top: 139px;
   }
@@ -340,28 +340,29 @@ body {
   }
 
   .u-section-1 .u-btn-1 {
-    margin-top: 82px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .u-section-1 .u-icon-1 {
     font-size: 4em;
-    bottom: 40px;
   }
-.error-message-agreeError{
-  left: 162px;
+  .error-message-agreeError{
+    left: 162px;
 
-}
-.error-message-survey{
-    left: 324px;
-    top: -118px;
-    right: 31px;
-}
+  }
+  .error-message-survey{
+    left: 0;
+    top: -115px;
+    right: 0;
+    margin: auto;
+    width: 243px;
+  }
   .u-section-1 .u-image-3 {
     width: 25px;
     height: 14px;
-    margin-top: -416px;
+    margin-top: -455px;
   }
 
   .u-section-1 .u-image-4 {
@@ -378,6 +379,8 @@ body {
 
   .u-dialog-section-4 .u-container-layout-1 {
     padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .u-dialog-section-4 .u-image-1 {
@@ -398,7 +401,7 @@ body {
   .u-dialog-section-4 .u-image-3 {
     width: 170px;
     height: 73px;
-    margin-top: -682px;
+    margin-top: -555px;
     margin-left: 271px;
   }
 
@@ -463,15 +466,28 @@ body {
 }
 
 @media (max-width: 767px) {
+
+  .u-dialog-section-4 .u-container-layout-1 {
+    display: block;
+  }
+
+  .error-message-survey {
+    left: 0;
+    right: 0;
+    width: 242px;
+    top: -230px;
+    margin: auto;
+  }
+
   .u-section-1 .u-sheet-1 {
     min-height: 1322px;
   }
 
   .u-section-1 .u-image-2 {
+    margin-left: auto;
+    margin-right: auto;
     height: 138px;
     margin-top: -776px;
-    margin-right: initial;
-    margin-left: initial;
     width: auto;
   }
 
@@ -482,11 +498,11 @@ body {
   }
 
   .u-section-1 .u-btn-1 {
-    margin-top: 90px;
+    margin-top: 35px;
   }
 
   .u-section-1 .u-image-3 {
-    margin-top: -402px;
+    margin-top: -460px;
     margin-right: 110px;
   }
 
@@ -500,10 +516,7 @@ body {
   }
 
   .u-dialog-section-4 .u-image-1 {
-    width: 170px;
-    height: 286px;
-    margin-top: -112px;
-    margin-left: 206px;
+    margin: auto;
   }
 
   .u-dialog-section-4 .u-image-2 {
@@ -519,12 +532,11 @@ body {
 
   .u-dialog-section-4 .u-image-3 {
     width: 170px;
-    margin-top: -457px;
-    margin-left: 271px;
+    margin: auto;
+    margin-top: -550px;
   }
 
   .u-dialog-section-4 .u-text-1 {
-    margin-top: -115px;
     margin-right: 159px;
     margin-left: 139px;
   }
@@ -573,7 +585,7 @@ body {
 
   .u-dialog-section-4 .u-image-8 {
     height: 44px;
-    margin-top: -121px;
+    margin-top: -190px;
   }
 }
 
@@ -682,7 +694,7 @@ body {
   }
 
   .u-section-1 .u-btn-1 {
-    margin-top: 60px;
+    margin-top: 50px;
     padding: 0;
     
   }
@@ -694,7 +706,7 @@ body {
   .u-section-1 .u-image-3 {
     width: 20px;
     height: 10px;
-    margin-top: -280px;
+    margin-top: -270px;
     margin-right: 50px;
   }
 
@@ -809,4 +821,8 @@ body {
     height: 44px;
     margin-top: -206px;
   }
+}
+
+.u-white>.u-container-layout:before {
+  background-color: #00000000;
 }

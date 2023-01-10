@@ -68,7 +68,7 @@ body {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 2000px) {
   .u-section-1 .u-sheet-1 {
     min-height: 674px;
   }

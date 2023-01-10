@@ -24,11 +24,25 @@
 
 <body>
   <div id='treasure-hunt-content' style="display: block">
-    <div id="unity-container" class="unity-desktop">
+    <div id="unity-container" class="unity-desktop" style="justify-content: center; display: flex;">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="mapnavbar" style="display: none;">
+        <div class="column">
+          <div class="item">
+            <img src="./images/Icon_GoogleMap.png" style="width:75px" onclick="openGoogleMap()">
+            <p>Google Map</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="item">
+            <img src="./images/Icon_Waze.png" style="width:75px" onclick="openWaze()">
+            <p>Waze</p>
+          </div>
         </div>
       </div>
       <div id="unity-warning"> </div>
@@ -146,6 +160,12 @@
         border-top-right-radius: 30px;
       }
 
+      @media (max-width: 1199px) {
+        #mapnavbar {
+          width: calc(100vh * 9 / 16);
+        }
+      }
+
       .item {
         text-align: center;
         display: block;
@@ -170,20 +190,7 @@
         margin-left: 40px;
       }
     </style>
-    <div id="mapnavbar" style="display: none;">
-      <div class="column">
-        <div class="item">
-          <img src="./images/Icon_GoogleMap.png" style="width:75px" onclick="openGoogleMap()">
-          <p>Google Map</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="item">
-          <img src="./images/Icon_Waze.png" style="width:75px" onclick="openWaze()">
-          <p>Waze</p>
-        </div>
-      </div>
-    </div>
+
   </div>
   <script src="./deviceOrientationHandler.js"></script>
 </body>

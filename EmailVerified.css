@@ -41,7 +41,7 @@ body {
   margin: 294px auto 0;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 2000px) {
    .u-section-1 {
     min-height: 1005px;
   }
@@ -60,7 +60,7 @@ body {
 }
 
 @media (max-width: 767px) {
-   .u-section-1 {
+   /* .u-section-1 {
     min-height: 852px;
   }
 
@@ -75,7 +75,7 @@ body {
 
   .u-section-1 .u-text-1 {
     margin-top: -585px;
-  }
+  } */
 }
 
 @media (max-width: 575px) {
