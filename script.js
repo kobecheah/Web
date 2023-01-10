@@ -81,9 +81,36 @@ mobileAndTabletCheck = function () {
     }
 
 }
+
+ipadGoogleCheck = function () {
+    if (/CriOS/i.test(navigator.userAgent) && /iphone|ipod|ipad/i.test(navigator.userAgent)) {
+        window.location.href = "./PhoneValidate.html";
+    }
+    else {
+       
+    }
+}
+isIpadOs = function () {
+    if (navigator.maxTouchPoints && navigator.maxTouchPoints > 2 &&/MacIntel/.test(navigator.platform)) {
+        window.location.href = "./PhoneValidate.html";
+    }
+    else {
+       
+    }
+}
+istab = function () {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
+    if (isTablet){
+        window.location.href = "./PhoneValidate.html";
+    }
+}
 window.onload = onload();
 
 function onload() {
     //secureWebsite();
     mobileAndTabletCheck();
+    ipadGoogleCheck();
+    isIpadOs();
+    istab();
 }
